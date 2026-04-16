@@ -1,102 +1,575 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shreyas' Personal Site</title>
-  </head>
-  <body>
-    <table cellspacing="20">
-        <tr>
-            <td>
-                <img src="Images/Shreyas -- Casual-circle.png" alt="shreyas' profile picture" width="50%" height="50%">
-            </td>
-            <td>
-                <h1>Shreyas Raorane</h1>
-                <p><em>Student at <strong>SRM Institute of Science and Technology.</strong></em></p>
-                <p>I am a final year Student at SRM Institute of Science and Technology. I have experience working on Robotics and Management Doamins along with projects ranging from Animation in Python to Web apps.</p>
-            </td>
-        </tr>
-    </table>
-    
-    <hr>
-    <h3>Education</h3>
-    <ul>
-        <li>SRM Institue of Science and Technology</li> 
-        <li>Navrachana School 10th & 12th</li>
-    </ul>
-    <hr>
-    <h3>Publications</h3>
-    <ol>
-        <li>Beeclust</li> 
-        <li>Minor Project</li> 
-        <li>Major Project</li>
-    </ol>
-    <hr>
-    <h3>Work experience</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Dates</th>
-                <th>Work</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2020</td>
-                <td>Takenmind Internship</td>
-            </tr>
-            <tr>
-                <td>Jul 2021 - Feb 2022</td>
-                <td>PwC Internship</td>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
-    <h3>Programming Languages</h3>
-    <table cellspacing="10">
-        <tr>
-            <td>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Python </td>
-                            <td>⭐⭐⭐⭐⭐</td>
-                        </tr>
-                        <tr>
-                            <td>C/C++</td>
-                            <td>⭐⭐⭐⭐</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>⭐⭐⭐⭐</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>HTML/CSS</td>
-                            <td>⭐⭐⭐</td>
-                        </tr>
-                        <tr>
-                            <td>Matlab</td>
-                            <td>⭐⭐⭐</td>
-                        </tr>
-                        <tr>
-                            <td>Fortran</td>
-                            <td>⭐⭐</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <hr>
-    <h3><a href="socials.html">Socials</a></h3>
-    <h3><a href="contact-me.html">Contact Me</a></h3>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shreyas Raorane — Robotics Software Engineer. Multi-agent coordination, motion planning, ROS2 autonomy. M.S.E. Robotics at UPenn GRASP Lab." />
+  <meta property="og:title" content="Shreyas Raorane — Robotics Engineer" />
+  <meta property="og:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shreyas0812.github.io" />
+  <title>Shreyas Raorane</title>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Shreyas Raorane","jobTitle":"Robotics Software Engineer","affiliation":{"@type":"Organization","name":"University of Pennsylvania GRASP Lab"},"url":"https://shreyas0812.github.io","email":"raorane@seas.upenn.edu","sameAs":["https://github.com/Shreyas0812","https://www.linkedin.com/in/shreyas-raorane"]}
+  </script>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --font-display:'Cabinet Grotesk','Satoshi',sans-serif;
+      --font-body:'Satoshi',Inter,sans-serif;
+      --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
+      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+      --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+      --text-hero:clamp(3rem,1rem + 6vw,6rem);
+      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
+      --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
+      --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
+      --radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;
+      --radius-xl:1rem;--radius-2xl:1.5rem;--radius-full:9999px;
+      --ease:180ms cubic-bezier(.16,1,.3,1);
+      --content:1100px;
+    }
+    [data-theme="light"]{
+      --bg:#f4f3ef;--surface:#faf9f7;--surface-2:#eeece7;
+      --border:rgba(30,24,12,.1);--divider:rgba(30,24,12,.06);
+      --text:#18160f;--text-muted:#65625b;--text-faint:#aba9a2;
+      --accent:#0b7a72;--accent-h:#08615a;--accent-bg:rgba(11,122,114,.08);--accent-fg:#020d0c;
+      --sh-sm:0 1px 3px rgba(15,12,5,.07);
+      --sh-md:0 8px 28px rgba(15,12,5,.1);
+      --sh-lg:0 24px 60px rgba(15,12,5,.14);
+    }
+    [data-theme="dark"]{
+      --bg:#0b1119;--surface:#101820;--surface-2:#161f2c;
+      --border:rgba(255,255,255,.07);--divider:rgba(255,255,255,.05);
+      --text:#dde5f0;--text-muted:#8896ac;--text-faint:#4a5a70;
+      --accent:#3ecec0;--accent-h:#62dbd0;--accent-bg:rgba(62,206,192,.09);--accent-fg:#01100e;
+      --sh-sm:0 1px 3px rgba(0,0,0,.25);
+      --sh-md:0 8px 28px rgba(0,0,0,.32);
+      --sh-lg:0 28px 64px rgba(0,0,0,.5);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--text);background:var(--bg);min-height:100vh;transition:background .3s,color .3s}
+    img,svg{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--radius-sm)}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .skip{position:absolute;left:1rem;top:-5rem;padding:.7rem 1.2rem;border-radius:var(--radius-md);background:var(--accent);color:var(--accent-fg);font-weight:700;z-index:99;transition:top .2s}
+    .skip:focus{top:1rem}
+    .wrap{width:min(calc(100% - 2.5rem),var(--content));margin:0 auto}
+
+    /* NAV */
+    .nav-shell{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-4) 0}
+    .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;font-size:var(--text-sm)}
+    .brand-ico{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex-shrink:0}
+    .nav-r{display:flex;align-items:center;gap:var(--space-5)}
+    .nav-r a{color:var(--text-muted);font-size:var(--text-sm);font-weight:500;transition:color var(--ease)}
+    .nav-r a:hover{color:var(--text)}
+    .t-btn{width:38px;height:38px;border-radius:var(--radius-full);border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;transition:background var(--ease)}
+    .t-btn:hover{background:var(--surface-2)}
+
+    /* HERO */
+    .hero{padding:clamp(var(--space-16),10vh,var(--space-24)) 0 clamp(var(--space-12),8vh,var(--space-20))}
+    .hero-g{display:grid;grid-template-columns:1fr 370px;gap:var(--space-10);align-items:center}
+    .ey{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-5)}
+    .ey-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pu 2.4s ease infinite}
+    @keyframes pu{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+    h1{font-family:var(--font-display);font-size:var(--text-hero);line-height:1.02;letter-spacing:-.04em;font-weight:900;max-width:12ch;margin-bottom:var(--space-6)}
+    h1 em{font-style:normal;color:var(--accent)}
+    .hero-p{color:var(--text-muted);max-width:56ch;margin-bottom:var(--space-8);line-height:1.75}
+    .btns{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;min-height:46px;padding:.85rem 1.5rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;border:1px solid var(--border);transition:all var(--ease)}
+    .bp{background:var(--accent);color:var(--accent-fg);border-color:transparent}
+    .bp:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 6px 22px rgba(62,206,192,.28)}
+    .bg:hover{background:var(--surface);border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
+
+    /* hero card */
+    .hc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:var(--space-6);box-shadow:var(--sh-lg);display:grid;gap:var(--space-5)}
+    .sg{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+    .sb{background:var(--accent-bg);border-radius:var(--radius-lg);padding:var(--space-4)}
+    .sl{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em}
+    .sv{font-weight:700;font-size:var(--text-sm);margin-top:.3rem}
+    .chips{display:flex;flex-wrap:wrap;gap:.4rem}
+    .chip{font-family:var(--font-mono);font-size:.7rem;padding:.28rem .6rem;border-radius:var(--radius-full);border:1px solid var(--border);color:var(--text-muted);background:var(--surface-2)}
+
+    /* SECTIONS */
+    section{padding:clamp(var(--space-12),7vw,var(--space-20)) 0}
+    .sl2{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:var(--space-3)}
+    h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:var(--space-4)}
+    h3{font-size:var(--text-base);font-weight:800;line-height:1.25}
+    .si{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:end;margin-bottom:clamp(var(--space-8),5vw,var(--space-12))}
+    .si p{color:var(--text-muted);max-width:52ch}
+    hr.d{border:none;border-top:1px solid var(--divider)}
+
+    /* BENTO */
+    .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-4)}
+    .bc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--sh-sm)}
+    .bc p{color:var(--text-muted);margin-top:.55rem;font-size:var(--text-base)}
+    .cw7{grid-column:span 7}.cw5{grid-column:span 5}.cw4{grid-column:span 4}.cw12{grid-column:span 12}
+    .pub-r{padding:var(--space-3) 0;border-bottom:1px solid var(--divider)}
+    .pub-r:last-child{border-bottom:none;padding-bottom:0}
+    .pub-t{font-weight:700;font-size:var(--text-sm)}
+    .pub-m{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);margin-top:.25rem}
+
+    /* EXP */
+    .exp-l{display:grid;gap:var(--space-4)}
+    .ec{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-7);box-shadow:var(--sh-sm);display:grid;grid-template-columns:190px 1fr;gap:var(--space-6)}
+    .em{padding-top:.1rem}
+    .ed{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint);letter-spacing:.04em}
+    .eo{font-weight:700;margin:.3rem 0 .15rem;font-size:var(--text-sm)}
+    .eloc{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted)}
+    .etag{display:inline-flex;align-items:center;padding:.2rem .55rem;margin-top:.55rem;border-radius:var(--radius-full);background:var(--accent-bg);color:var(--accent);font-family:var(--font-mono);font-size:.69rem;font-weight:600}
+    .et{font-weight:800;font-size:var(--text-lg);margin-bottom:.5rem;font-family:var(--font-display)}
+    .eb p{color:var(--text-muted)}
+    .eb ul{margin:.7rem 0 0 1.1rem;color:var(--text-muted)}
+    .eb li{margin-bottom:.45rem}
+    .eb strong{color:var(--text);font-weight:600}
+
+    /* PROJECTS */
+    .pg{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+    .proj{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:var(--space-3);transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
+    .proj:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--border));box-shadow:var(--sh-md);transform:translateY(-2px)}
+    .pt{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3)}
+    .pi{width:42px;height:42px;border-radius:var(--radius-lg);background:var(--accent-bg);display:grid;place-items:center;flex-shrink:0;font-size:1.2rem}
+    .pc{font-family:var(--font-mono);font-size:.69rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+    .proj p{color:var(--text-muted);font-size:var(--text-sm);flex:1;line-height:1.6}
+    .ps{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem}
+    .pst{font-family:var(--font-mono);font-size:.68rem;padding:.25rem .55rem;border-radius:var(--radius-full);background:var(--surface-2);border:1px solid var(--border);color:var(--text-muted)}
+    .pl{align-self:flex-start;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);display:inline-flex;align-items:center;gap:.3rem;border-bottom:1px solid var(--divider);padding-bottom:.15rem;transition:color var(--ease),border-color var(--ease)}
+    .pl:hover{color:var(--accent);border-color:var(--accent)}
+
+    /* SKILLS */
+    .sk-g{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+    .sk-b{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5)}
+    .sk-b h3{font-size:var(--text-sm);margin-bottom:var(--space-3)}
+    .sk-chips{display:flex;flex-wrap:wrap;gap:.4rem}
+    .sc{font-family:var(--font-mono);font-size:.69rem;padding:.28rem .58rem;border-radius:var(--radius-full);border:1px solid var(--border);color:var(--text-muted);background:var(--surface-2)}
+
+    /* CONTACT */
+    .ct-g{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--space-5);align-items:start}
+    .cm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:var(--space-8);box-shadow:var(--sh-md)}
+    .cm h2{margin-bottom:var(--space-3)}
+    .cm p{color:var(--text-muted);max-width:50ch;margin-bottom:var(--space-6)}
+    .cs{display:grid;gap:var(--space-3)}
+    .cr{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-4) var(--space-5);display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);transition:border-color var(--ease)}
+    .cr:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
+    .cr-l{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint);text-transform:uppercase;letter-spacing:.07em}
+    .cr-v{font-weight:600;font-size:var(--text-sm)}
+    .arr{color:var(--text-faint);font-size:.85rem}
+
+    /* FOOTER */
+    footer{padding:var(--space-8) 0 var(--space-12);border-top:1px solid var(--divider)}
+    .fi{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap}
+    .fi p,.fl a{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint)}
+    .fl{display:flex;gap:var(--space-5)}
+    .fl a{transition:color var(--ease)}
+    .fl a:hover{color:var(--accent)}
+
+    /* SCROLL REVEAL */
+    .r{opacity:1}
+    @supports (animation-timeline:scroll()){
+      .r{opacity:0;animation:rf linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+      @keyframes rf{to{opacity:1}}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+      html{scroll-behavior:auto}
+      .r{opacity:1}
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero-g{grid-template-columns:1fr}.hc{display:none}
+      .cw7,.cw5{grid-column:span 12}.cw4{grid-column:span 6}
+      .sk-g{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:768px){
+      .si,.ct-g{grid-template-columns:1fr}
+      .ec{grid-template-columns:1fr}
+      .pg{grid-template-columns:1fr}
+      .bento{display:flex;flex-direction:column}
+      .sk-g{grid-template-columns:1fr}
+      .nav-r a:not([aria-label]):not(:last-child){display:none}
+      h1{font-size:clamp(2.8rem,10vw,4rem)}
+    }
+    @media(max-width:480px){
+      .wrap{width:calc(100% - 1.5rem)}
+      .btns .btn{flex:1;justify-content:center}
+      .cr{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="nav-shell">
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Shreyas Raorane — home">
+          <div class="brand-ico" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15.5L10 3.5l5 12" stroke="#01100e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 10.5h6" stroke="#01100e" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          Shreyas Raorane
+        </a>
+        <div class="nav-r">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button class="t-btn" data-theme-toggle aria-label="Toggle dark/light mode">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="ticon">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-g">
+          <div>
+            <div class="ey"><span class="ey-dot" aria-hidden="true"></span>Philadelphia, PA &nbsp;·&nbsp; M.S.E. Robotics @ UPenn &nbsp;·&nbsp; Open to 2026 roles</div>
+            <h1>Robots that work when conditions <em>break.</em></h1>
+            <p class="hero-p">I'm a robotics software engineer specializing in multi-agent coordination, motion planning, and systems that hold up under real-world constraints. Currently at Penn's GRASP Lab, where my thesis work centers on decentralized fleet coordination that stays functional even under communication failure — and building production-grade autonomy software alongside it.</p>
+            <div class="btns">
+              <a class="btn bp" href="#projects">See my work</a>
+              <a class="btn bg" href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a class="btn bg" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+          <aside class="hc" aria-label="Quick profile">
+            <div>
+              <div class="sl" style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;">Currently</div>
+              <p style="font-weight:700;font-size:var(--text-base);margin-top:.4rem;line-height:1.4;">GRASP Lab thesis on decentralized multi-robot coordination for warehouse automation.</p>
+            </div>
+            <div class="sg">
+              <div class="sb"><div class="sl">School</div><div class="sv">UPenn MSE</div></div>
+              <div class="sb"><div class="sl">Lab</div><div class="sv">GRASP Lab</div></div>
+              <div class="sb"><div class="sl">GPA</div><div class="sv">3.84 / 4.0</div></div>
+              <div class="sb"><div class="sl">Grad</div><div class="sv">Jun 2026</div></div>
+            </div>
+            <div>
+              <div class="sl" style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.55rem;">Core stack</div>
+              <div class="chips">
+                <span class="chip">C++</span><span class="chip">Python</span><span class="chip">ROS2</span>
+                <span class="chip">MPC</span><span class="chip">Multi-agent</span><span class="chip">Planning</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">About</div><h2>Systems thinking, end to end.</h2></div>
+          <p>My background bridges algorithm research and production software engineering — two things that rarely coexist in a single profile. That combination is what I bring to hard robotics problems.</p>
+        </div>
+        <div class="bento">
+          <article class="bc cw7 r">
+            <div class="sl2">Research direction</div>
+            <h3>Why distributed coordination?</h3>
+            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on GCBBA, on distributed MPC for quadrotors, and on event-driven replanning under partial connectivity.</p>
+          </article>
+          <article class="bc cw5 r">
+            <div class="sl2">Research interest</div>
+            <h3>Decentralized multi-agent systems</h3>
+            <p>Task allocation, consensus-based coordination, and communication-aware planning — especially where real-world constraints like intermittent links, timing failures, and partial observability make textbook solutions break down.</p>
+          </article>
+          <article class="bc cw4 r">
+            <div class="sl2">Industry</div>
+            <h3>Production software</h3>
+            <p>2+ years shipping at Brillio and OPEX. I know what it costs to integrate systems that weren't designed together.</p>
+          </article>
+          <article class="bc cw4 r">
+            <div class="sl2">Autonomy</div>
+            <h3>Full-stack robotics</h3>
+            <p>ROS2 pipelines, perception, localization, planning, and hardware work on real platforms: F1/10 and Franka Emika Panda.</p>
+          </article>
+          <article class="bc cw4 r">
+            <div class="sl2">Publication</div>
+            <h3>Journal work</h3>
+            <div class="pub-r">
+              <div class="pub-t">Towards Optimized Distributed Multi-Robot Printing: An Algorithmic Approach</div>
+              <div class="pub-m">Karpe, Sinha, Raorane et al. · Journal of Intelligent Robotic Systems · 2020</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">Experience</div><h2>Where I've worked.</h2></div>
+          <p>Research and industry experience across robotics simulation, production software, and multi-robot planning — with a focus on systems that hold up under real constraints.</p>
+        </div>
+        <div class="exp-l">
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Oct 2025 – Present</div>
+              <div class="eo">UPenn GRASP Lab</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Research</div>
+            </div>
+            <div class="eb">
+              <div class="et">Graduate Researcher — M.S.E. Thesis</div>
+              <p>Advisors: Prof. Linh Phan &amp; Prof. Rahul Mangharam. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
+              <ul>
+                <li>Designed a <strong>consensus-based distributed task allocation framework (GCBBA)</strong> achieving 87–100% task completion where centralized baselines collapse to zero under network partitioning.</li>
+                <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
+                <li>Validated on a 30×30 grid with <strong>6 robots and 80 concurrent tasks</strong> across full and degraded connectivity.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Jun – Aug 2025</div>
+              <div class="eo">OPEX Corporation</div>
+              <div class="eloc">Moorestown, NJ</div>
+              <div class="etag">Industry</div>
+            </div>
+            <div class="eb">
+              <div class="et">Time-Critical Software Engineering Intern</div>
+              <p>Developed production-grade C++ simulation infrastructure for warehouse automation, where timing accuracy and correctness under concurrency directly affected downstream control systems.</p>
+              <ul>
+                <li>Built a <strong>multi-threaded discrete-event simulation</strong> managing 1,000+ parallel material flow events with shared state across 3 concurrent threads.</li>
+                <li>Developed a <strong>time-critical scheduling engine</strong> with sub-millisecond timing accuracy for production actuation sequence validation.</li>
+                <li>Refactored legacy codebase with shared header architecture, cutting integration overhead by <strong>60%</strong>.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Jun 2022 – Jun 2024</div>
+              <div class="eo">Brillio Technologies</div>
+              <div class="eloc">Bengaluru, India</div>
+              <div class="etag">Industry</div>
+            </div>
+            <div class="eb">
+              <div class="et">Software Development Engineer</div>
+              <p>Full-stack engineering across frontend, backend, and data layers on enterprise-scale production software. Shipped features through CI/CD pipelines on a 20-person agile team.</p>
+              <ul>
+                <li>Built <strong>10 Angular components</strong> and optimized 40 PostgreSQL queries for Verizon's ESAP Migration Project — reduced response time by <strong>35%</strong> across 10,000 users.</li>
+                <li>Worked across the full application stack with peer code review and Agile/SAFe delivery.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">Projects</div><h2>Selected technical work.</h2></div>
+          <p>Four projects across my core areas: distributed coordination, model predictive control, adaptive motion planning, and end-to-end ROS2 autonomy stacks.</p>
+        </div>
+        <div class="pg">
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">🤖</div>
+              <div class="pc">Multi-agent · Thesis</div>
+            </div>
+            <h3>GCBBA Warehouse System</h3>
+            <p>Decentralized task allocation for warehouse automation. Consensus-based distributed bidding with A* collision avoidance and event-driven replanning — stays functional even when communication graphs become disconnected, where centralized baselines drop to zero.</p>
+            <div class="ps">
+              <span class="pst">87–100% task completion</span>
+              <span class="pst">6 robots · 80 tasks</span>
+              <span class="pst">Python</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/GCBBA-Warehouse-System" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">🚁</div>
+              <div class="pc">Controls · Multi-robot</div>
+            </div>
+            <h3>SwarmSync</h3>
+            <p>Distributed MPC for quadrotor swarms. QP-backed collision-free trajectory generation across 8 UAVs with dynamic obstacle handling and adaptive goal tracking — 95% mission success in simulation with 30% reduced completion time.</p>
+            <div class="ps">
+              <span class="pst">95% mission success</span>
+              <span class="pst">8 quadrotors</span>
+              <span class="pst">Python · DMPC</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/SwarmSync" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">🗺️</div>
+              <div class="pc">Motion planning</div>
+            </div>
+            <h3>SBAMP</h3>
+            <p>Sampling-based adaptive motion planner integrating RRT with dynamical systems attractors. Achieves 85% faster replanning than static RRT baselines while maintaining real-time goal tracking on mobile robots.</p>
+            <div class="ps">
+              <span class="pst">85% faster replanning</span>
+              <span class="pst">RRT + DS attractors</span>
+              <span class="pst">Python</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/SBAMP" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">🏎️</div>
+              <div class="pc">ROS2 · Autonomy</div>
+            </div>
+            <h3>F1/10 Autonomous Racing Stack</h3>
+            <p>Full ROS2 autonomy stack for the F1/10 platform: perception, localization, planning, and a live Gradio tuning interface that reduced iteration time by 70%. Paired with pick-and-place on a 7-DOF Franka Panda arm using IK + RRT (90% grasp success).</p>
+            <div class="ps">
+              <span class="pst">70% faster tuning</span>
+              <span class="pst">ROS2 · SLAM</span>
+              <span class="pst">Python · C++</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/roboracer-autodrive-ws" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- SKILLS -->
+    <section>
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">Skills</div><h2>Technical toolkit.</h2></div>
+          <p>Core languages, robotics tools, and systems knowledge built across research, internships, and coursework at UPenn and beyond.</p>
+        </div>
+        <div class="sk-g r">
+          <div class="sk-b">
+            <h3>Languages</h3>
+            <div class="sk-chips">
+              <span class="sc">C++</span><span class="sc">Python</span><span class="sc">MATLAB</span><span class="sc">JavaScript</span><span class="sc">SQL</span>
+            </div>
+          </div>
+          <div class="sk-b">
+            <h3>Planning &amp; Control</h3>
+            <div class="sk-chips">
+              <span class="sc">RRT / RRT*</span><span class="sc">A*</span><span class="sc">MPC / DMPC</span><span class="sc">SLAM</span><span class="sc">Sensor fusion</span><span class="sc">IK</span>
+            </div>
+          </div>
+          <div class="sk-b">
+            <h3>Multi-agent</h3>
+            <div class="sk-chips">
+              <span class="sc">Consensus algorithms</span><span class="sc">Task allocation</span><span class="sc">GCBBA / CBBA</span><span class="sc">Fleet coordination</span>
+            </div>
+          </div>
+          <div class="sk-b">
+            <h3>Robotics tools</h3>
+            <div class="sk-chips">
+              <span class="sc">ROS2</span><span class="sc">Gazebo</span><span class="sc">PyBullet</span><span class="sc">OpenCV</span><span class="sc">Foxglove</span><span class="sc">AutoDRIVE</span>
+            </div>
+          </div>
+          <div class="sk-b">
+            <h3>Systems</h3>
+            <div class="sk-chips">
+              <span class="sc">Multi-threading</span><span class="sc">Real-time systems</span><span class="sc">Discrete-event sim</span><span class="sc">Event-driven arch</span>
+            </div>
+          </div>
+          <div class="sk-b">
+            <h3>ML &amp; Infra</h3>
+            <div class="sk-chips">
+              <span class="sc">PyTorch</span><span class="sc">TensorFlow</span><span class="sc">Docker</span><span class="sc">Git</span><span class="sc">CI/CD</span><span class="sc">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="ct-g">
+          <div class="cm r">
+            <div class="sl2">Contact</div>
+            <h2>Let's talk robots.</h2>
+            <p>I'm looking for robotics software, autonomy, and multi-robot systems roles starting summer/fall 2026. Happy to chat about work, research, or projects.</p>
+            <div class="btns">
+              <a class="btn bp" href="mailto:raorane@seas.upenn.edu">Send an email</a>
+              <a class="btn bg" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+          <div class="cs r">
+            <a class="cr" href="mailto:raorane@seas.upenn.edu">
+              <div><div class="cr-l">Email</div><div class="cr-v">raorane@seas.upenn.edu</div></div>
+              <span class="arr">→</span>
+            </a>
+            <a class="cr" href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">
+              <div><div class="cr-l">GitHub</div><div class="cr-v">Shreyas0812</div></div>
+              <span class="arr">→</span>
+            </a>
+            <a class="cr" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">
+              <div><div class="cr-l">LinkedIn</div><div class="cr-v">shreyas-raorane</div></div>
+              <span class="arr">→</span>
+            </a>
+            <div class="cr">
+              <div><div class="cr-l">Location</div><div class="cr-v">Philadelphia, PA</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="fi">
+        <p>© 2026 Shreyas Raorane</p>
+        <div class="fl">
+          <a href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:raorane@seas.upenn.edu">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var root=document.documentElement;
+    var btn=document.querySelector('[data-theme-toggle]');
+    var icon=document.getElementById('ticon');
+    var DARK='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    var LIGHT='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    var t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    root.setAttribute('data-theme',t);
+    if(icon)icon.innerHTML=t==='dark'?DARK:LIGHT;
+    if(btn)btn.addEventListener('click',function(){
+      t=t==='dark'?'light':'dark';
+      root.setAttribute('data-theme',t);
+      if(icon)icon.innerHTML=t==='dark'?DARK:LIGHT;
+      btn.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' mode');
+    });
+  })();
+  </script>
 </body>
 </html>
