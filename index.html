@@ -702,7 +702,7 @@
             </div>
           </div>
           <div class="cs r">
-            <a class="cr" href="/cdn-cgi/l/email-protection#8ffdeee0fdeee1eacffceaeefca1faffeae1e1a1eaebfa">
+            <a class="cr" id="email-cr">
               <div class="cr-ico" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
@@ -710,7 +710,7 @@
               </div>
               <div class="cr-body">
                 <div class="cr-l">Email</div>
-                <div class="cr-v"><span class="__cf_email__" data-cfemail="84f6e5ebf6e5eae1c4f7e1e5f7aaf1f4e1eaeaaae1e0f1">[email&#160;protected]</span></div>
+                <div class="cr-v" id="email-val"></div>
               </div>
               <span class="arr">→</span>
             </a>
@@ -754,18 +754,29 @@
         <div class="fl">
           <a href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="/cdn-cgi/l/email-protection#2f5d4e405d4e414a6f5c4a4e5c015a5f4a4141014a4b5a">Email</a>
+          <a href="/cdn-cgi/l/email-protection#88fae9e7fae9e6edc8fbede9fba6fdf8ede6e6a6edecfd">Email</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Build email at runtime to avoid bot scraping / Cloudflare obfuscation
+  (function(){
+    var u = 'raorane', d = 'seas.upenn.edu';
+    var email = u + '@' + d;
+    var cr = document.getElementById('email-cr');
+    var val = document.getElementById('email-val');
+    if (cr) { cr.href = 'mailto:' + email; cr.onclick = function(e){ e.preventDefault(); copyEmail(); }; }
+    if (val) val.textContent = email;
+  })();
+
   // Copy email
   function copyEmail() {
-    navigator.clipboard.writeText('raorane@seas.upenn.edu').then(function(){
-      var btn = document.getElementById('copy-email-btn');
-      var original = btn.innerHTML;
+    var email = 'raorane' + '@' + 'seas.upenn.edu';
+    var btn = document.getElementById('copy-email-btn');
+    var original = btn.innerHTML;
+    navigator.clipboard.writeText(email).then(function(){
       btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Copied!';
       btn.style.background = 'var(--accent-h)';
       setTimeout(function(){ btn.innerHTML = original; btn.style.background = ''; }, 2000);
