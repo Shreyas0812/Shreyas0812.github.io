@@ -7,209 +7,337 @@
   <meta property="og:title" content="Shreyas Raorane — Robotics Engineer" />
   <meta property="og:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shreyas0812.github.io" />
   <title>Shreyas Raorane</title>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Shreyas Raorane","jobTitle":"Robotics Software Engineer","affiliation":{"@type":"Organization","name":"University of Pennsylvania GRASP Lab"},"url":"https://shreyas0812.github.io","email":"raorane@seas.upenn.edu","sameAs":["https://github.com/Shreyas0812","https://www.linkedin.com/in/shreyas-raorane"]}
-  </script>
+
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --font-display:'Cabinet Grotesk','Satoshi',sans-serif;
-      --font-body:'Satoshi',Inter,sans-serif;
-      --font-mono:'IBM Plex Mono',ui-monospace,monospace;
-      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
-      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
-      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
-      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
-      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-      --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
-      --text-hero:clamp(3rem,1rem + 6vw,6rem);
+    :root {
+      --font-display: 'Cabinet Grotesk', 'Satoshi', sans-serif;
+      --font-body: 'Satoshi', Inter, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --text-xs: clamp(.75rem, .7rem + .25vw, .875rem);
+      --text-sm: clamp(.875rem, .8rem + .35vw, 1rem);
+      --text-base: clamp(1rem, .95rem + .25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + .75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-hero: clamp(3rem, 1rem + 6vw, 6rem);
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
       --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
       --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
       --radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;
       --radius-xl:1rem;--radius-2xl:1.5rem;--radius-full:9999px;
-      --ease:180ms cubic-bezier(.16,1,.3,1);
-      --content:1100px;
+      --ease: 180ms cubic-bezier(.16,1,.3,1);
+      --content: 1100px;
     }
-    [data-theme="light"]{
-      --bg:#f4f3ef;--surface:#faf9f7;--surface-2:#eeece7;
-      --border:rgba(30,24,12,.1);--divider:rgba(30,24,12,.06);
-      --text:#18160f;--text-muted:#65625b;--text-faint:#aba9a2;
-      --accent:#0b7a72;--accent-h:#08615a;--accent-bg:rgba(11,122,114,.08);--accent-fg:#020d0c;
-      --sh-sm:0 1px 3px rgba(15,12,5,.07);
-      --sh-md:0 8px 28px rgba(15,12,5,.1);
-      --sh-lg:0 24px 60px rgba(15,12,5,.14);
+    [data-theme="light"] {
+      --bg: #f4f3ef;
+      --surface: #faf9f7;
+      --surface-2: #eeece7;
+      --border: rgba(30,24,12,.1);
+      --divider: rgba(30,24,12,.06);
+      --text: #18160f;
+      --text-muted: #65625b;
+      --text-faint: #aba9a2;
+      --accent: #0b7a72;
+      --accent-h: #08615a;
+      --accent-bg: rgba(11,122,114,.08);
+      --accent-fg: #020d0c;
+      --sh-sm: 0 1px 3px rgba(15,12,5,.07);
+      --sh-md: 0 8px 28px rgba(15,12,5,.1);
+      --sh-lg: 0 24px 60px rgba(15,12,5,.14);
+      --grid-line: rgba(30,24,12,.05);
+      --term-bg: #1a1e26;
+      --term-text: #3ecec0;
     }
-    [data-theme="dark"]{
-      --bg:#0b1119;--surface:#101820;--surface-2:#161f2c;
-      --border:rgba(255,255,255,.07);--divider:rgba(255,255,255,.05);
-      --text:#dde5f0;--text-muted:#8896ac;--text-faint:#4a5a70;
-      --accent:#3ecec0;--accent-h:#62dbd0;--accent-bg:rgba(62,206,192,.09);--accent-fg:#01100e;
-      --sh-sm:0 1px 3px rgba(0,0,0,.25);
-      --sh-md:0 8px 28px rgba(0,0,0,.32);
-      --sh-lg:0 28px 64px rgba(0,0,0,.5);
+    [data-theme="dark"] {
+      --bg: #0b1119;
+      --surface: #101820;
+      --surface-2: #161f2c;
+      --border: rgba(255,255,255,.07);
+      --divider: rgba(255,255,255,.05);
+      --text: #dde5f0;
+      --text-muted: #8896ac;
+      --text-faint: #4a5a70;
+      --accent: #3ecec0;
+      --accent-h: #62dbd0;
+      --accent-bg: rgba(62,206,192,.09);
+      --accent-fg: #01100e;
+      --sh-sm: 0 1px 3px rgba(0,0,0,.25);
+      --sh-md: 0 8px 28px rgba(0,0,0,.32);
+      --sh-lg: 0 28px 64px rgba(0,0,0,.5);
+      --grid-line: rgba(255,255,255,.03);
+      --term-bg: #080e14;
+      --term-text: #3ecec0;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-    body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--text);background:var(--bg);min-height:100vh;transition:background .3s,color .3s}
-    img,svg{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
-    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:var(--radius-sm)}
-    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-    .skip{position:absolute;left:1rem;top:-5rem;padding:.7rem 1.2rem;border-radius:var(--radius-md);background:var(--accent);color:var(--accent-fg);font-weight:700;z-index:99;transition:top .2s}
-    .skip:focus{top:1rem}
-    .wrap{width:min(calc(100% - 2.5rem),var(--content));margin:0 auto}
+
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--text); background: var(--bg); min-height: 100vh; transition: background .3s, color .3s; }
+    img, svg { display: block; max-width: 100% }
+    a { color: inherit; text-decoration: none }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: var(--radius-sm) }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap }
+    .skip { position: absolute; left: 1rem; top: -5rem; padding: .7rem 1.2rem; border-radius: var(--radius-md); background: var(--accent); color: var(--accent-fg); font-weight: 700; z-index: 99; transition: top .2s }
+    .skip:focus { top: 1rem }
+    .wrap { width: min(calc(100% - 2.5rem), var(--content)); margin: 0 auto }
+
+    /* SCROLL PROGRESS */
+    #progress {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-h));
+      z-index: 100; transition: width .1s linear;
+    }
 
     /* NAV */
-    .nav-shell{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-4) 0}
-    .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;font-size:var(--text-sm)}
-    .brand-ico{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex-shrink:0}
-    .nav-r{display:flex;align-items:center;gap:var(--space-5)}
-    .nav-r a{color:var(--text-muted);font-size:var(--text-sm);font-weight:500;transition:color var(--ease)}
-    .nav-r a:hover{color:var(--text)}
-    .t-btn{width:38px;height:38px;border-radius:var(--radius-full);border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;transition:background var(--ease)}
-    .t-btn:hover{background:var(--surface-2)}
+    .nav-shell {
+      position: sticky; top: 0; z-index: 40;
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) 0 }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 800; font-size: var(--text-sm) }
+    .brand-ico { width: 34px; height: 34px; border-radius: 9px; background: var(--accent); display: grid; place-items: center; flex-shrink: 0 }
+    .nav-r { display: flex; align-items: center; gap: var(--space-5) }
+    .nav-r a { color: var(--text-muted); font-size: var(--text-sm); font-weight: 500; transition: color var(--ease); position: relative; }
+    .nav-r a:hover, .nav-r a.active { color: var(--text) }
+    .nav-r a.active::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--accent); border-radius: 1px;
+    }
+    .nav-resume {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-family: var(--font-mono); font-size: .72rem; font-weight: 500;
+      padding: .4rem .9rem; border-radius: var(--radius-full);
+      border: 1px solid var(--accent); color: var(--accent);
+      transition: all var(--ease); white-space: nowrap;
+    }
+    .nav-resume:hover { background: var(--accent); color: var(--accent-fg) }
+    .t-btn { width: 38px; height: 38px; border-radius: var(--radius-full); border: 1px solid var(--border); background: var(--surface); display: grid; place-items: center; transition: background var(--ease) }
+    .t-btn:hover { background: var(--surface-2) }
 
     /* HERO */
-    .hero{padding:clamp(var(--space-16),10vh,var(--space-24)) 0 clamp(var(--space-12),8vh,var(--space-20))}
-    .hero-g{display:grid;grid-template-columns:1fr 370px;gap:var(--space-10);align-items:center}
-    .ey{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-5)}
-    .ey-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pu 2.4s ease infinite}
-    @keyframes pu{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-    h1{font-family:var(--font-display);font-size:var(--text-hero);line-height:1.02;letter-spacing:-.04em;font-weight:900;max-width:12ch;margin-bottom:var(--space-6)}
-    h1 em{font-style:normal;color:var(--accent)}
-    .hero-p{color:var(--text-muted);max-width:56ch;margin-bottom:var(--space-8);line-height:1.75}
-    .btns{display:flex;flex-wrap:wrap;gap:var(--space-3)}
-    .btn{display:inline-flex;align-items:center;gap:.45rem;min-height:46px;padding:.85rem 1.5rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;border:1px solid var(--border);transition:all var(--ease)}
-    .bp{background:var(--accent);color:var(--accent-fg);border-color:transparent}
-    .bp:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 6px 22px rgba(62,206,192,.28)}
-    .bg:hover{background:var(--surface);border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
+    .hero { padding: clamp(var(--space-16), 10vh, var(--space-24)) 0 clamp(var(--space-12), 8vh, var(--space-20)); position: relative; overflow: hidden; }
+    /* Subtle grid background */
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 30%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 30%, transparent 100%);
+    }
+    .hero-g { display: grid; grid-template-columns: 1fr 360px; gap: var(--space-12); align-items: center; position: relative; }
+    .ey { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: var(--space-5) }
+    .ey-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: pu 2.4s ease infinite }
+    @keyframes pu { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+    h1 { font-family: var(--font-display); font-size: var(--text-hero); line-height: 1.02; letter-spacing: -.04em; font-weight: 900; max-width: 12ch; margin-bottom: var(--space-6) }
+    h1 em { font-style: normal; color: var(--accent) }
+    .hero-p { color: var(--text-muted); max-width: 56ch; margin-bottom: var(--space-8); line-height: 1.75 }
+    .btns { display: flex; flex-wrap: wrap; gap: var(--space-3) }
+    .btn { display: inline-flex; align-items: center; gap: .45rem; min-height: 46px; padding: .85rem 1.5rem; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 700; border: 1px solid var(--border); transition: all var(--ease) }
+    .bp { background: var(--accent); color: var(--accent-fg); border-color: transparent }
+    .bp:hover { background: var(--accent-h); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(62,206,192,.28) }
+    .bg:hover { background: var(--surface); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)) }
+    .btn-dl { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); color: var(--text-muted) }
+    .btn-dl:hover { background: var(--surface); color: var(--accent); border-color: var(--accent) }
 
-    /* hero card */
-    .hc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:var(--space-6);box-shadow:var(--sh-lg);display:grid;gap:var(--space-5)}
-    .sg{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
-    .sb{background:var(--accent-bg);border-radius:var(--radius-lg);padding:var(--space-4)}
-    .sl{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em}
-    .sv{font-weight:700;font-size:var(--text-sm);margin-top:.3rem}
-    .chips{display:flex;flex-wrap:wrap;gap:.4rem}
-    .chip{font-family:var(--font-mono);font-size:.7rem;padding:.28rem .6rem;border-radius:var(--radius-full);border:1px solid var(--border);color:var(--text-muted);background:var(--surface-2)}
+    /* TERMINAL CARD */
+    .term {
+      background: var(--term-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--sh-lg);
+      font-family: var(--font-mono);
+      font-size: .78rem;
+    }
+    .term-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .55rem 1rem;
+      background: #300a24;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .term-bar-left { display: flex; align-items: center; gap: .5rem }
+    .term-title { font-size: .68rem; color: rgba(255,255,255,.5) }
+    .term-bar-right { display: flex; align-items: center; gap: .4rem }
+    .t-wbtn {
+      width: 16px; height: 16px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.08);
+      display: grid; place-items: center;
+      font-size: .55rem; color: rgba(255,255,255,.4); line-height: 1;
+    }
+    .term-body { padding: 1.2rem 1.4rem; display: grid; gap: .55rem; line-height: 1.5 }
+    .tl { display: flex; gap: .6rem; align-items: baseline }
+    .tl .p { color: var(--accent); user-select: none }
+    .tl .cmd { color: #dde5f0 }
+    .tl .out { color: #8896ac; padding-left: 1.6rem }
+    .tl .val { color: #62dbd0; font-weight: 500 }
+    .tl .str { color: #f0a868 }
+    .tl .num { color: #a8d0f0 }
+    .tl .kw  { color: #c792ea }
+    .tl .cmt { color: #4a5a70 }
+    .term-cursor { display: inline-block; width: 7px; height: .9em; background: var(--accent); opacity: .9; animation: blink 1.1s step-end infinite; vertical-align: text-bottom; }
+    @keyframes blink { 0%,100%{opacity:.9} 50%{opacity:0} }
 
     /* SECTIONS */
-    section{padding:clamp(var(--space-12),7vw,var(--space-20)) 0}
-    .sl2{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:var(--space-3)}
-    h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:var(--space-4)}
-    h3{font-size:var(--text-base);font-weight:800;line-height:1.25}
-    .si{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:end;margin-bottom:clamp(var(--space-8),5vw,var(--space-12))}
-    .si p{color:var(--text-muted);max-width:52ch}
-    hr.d{border:none;border-top:1px solid var(--divider)}
+    section { padding: clamp(var(--space-12), 7vw, var(--space-20)) 0 }
+    .sl2 { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent); text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--space-3) }
+    h2 { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 900; letter-spacing: -.04em; line-height: 1.1; margin-bottom: var(--space-4) }
+    h3 { font-size: var(--text-base); font-weight: 800; line-height: 1.25 }
+    .si { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: end; margin-bottom: clamp(var(--space-8), 5vw, var(--space-12)) }
+    .si p { color: var(--text-muted); max-width: 52ch }
+    hr.d { border: none; border-top: 1px solid var(--divider) }
 
     /* BENTO */
-    .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-4)}
-    .bc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--sh-sm)}
-    .bc p{color:var(--text-muted);margin-top:.55rem;font-size:var(--text-base)}
-    .cw7{grid-column:span 7}.cw5{grid-column:span 5}.cw4{grid-column:span 4}.cw12{grid-column:span 12}
-    .pub-r{padding:var(--space-3) 0;border-bottom:1px solid var(--divider)}
-    .pub-r:last-child{border-bottom:none;padding-bottom:0}
-    .pub-t{font-weight:700;font-size:var(--text-sm)}
-    .pub-m{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);margin-top:.25rem}
+    .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4) }
+    .bc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--sh-sm) }
+    .bc p { color: var(--text-muted); margin-top: .55rem; font-size: var(--text-base) }
+    .cw7 { grid-column: span 7 } .cw5 { grid-column: span 5 } .cw4 { grid-column: span 4 } .cw12 { grid-column: span 12 }
+    .pub-r { padding: var(--space-3) 0; border-bottom: 1px solid var(--divider) }
+    .pub-r:last-child { border-bottom: none; padding-bottom: 0 }
+    .pub-t { font-weight: 700; font-size: var(--text-sm) }
+    .pub-m { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); margin-top: .25rem }
 
     /* EXP */
-    .exp-l{display:grid;gap:var(--space-4)}
-    .ec{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-7);box-shadow:var(--sh-sm);display:grid;grid-template-columns:190px 1fr;gap:var(--space-6)}
-    .em{padding-top:.1rem}
-    .ed{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint);letter-spacing:.04em}
-    .eo{font-weight:700;margin:.3rem 0 .15rem;font-size:var(--text-sm)}
-    .eloc{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted)}
-    .etag{display:inline-flex;align-items:center;padding:.2rem .55rem;margin-top:.55rem;border-radius:var(--radius-full);background:var(--accent-bg);color:var(--accent);font-family:var(--font-mono);font-size:.69rem;font-weight:600}
-    .et{font-weight:800;font-size:var(--text-lg);margin-bottom:.5rem;font-family:var(--font-display)}
-    .eb p{color:var(--text-muted)}
-    .eb ul{margin:.7rem 0 0 1.1rem;color:var(--text-muted)}
-    .eb li{margin-bottom:.45rem}
-    .eb strong{color:var(--text);font-weight:600}
+    .exp-l { display: grid; gap: var(--space-4) }
+    .ec {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl);
+      padding: var(--space-6) var(--space-7); box-shadow: var(--sh-sm);
+      display: grid; grid-template-columns: 190px 1fr; gap: var(--space-6);
+      transition: border-color var(--ease);
+    }
+    .ec:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--border)) }
+    .em { padding-top: .1rem }
+    .ed { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-faint); letter-spacing: .04em }
+    .eo { font-weight: 700; margin: .3rem 0 .15rem; font-size: var(--text-sm) }
+    .eloc { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted) }
+    .etag {
+      display: inline-flex; align-items: center; padding: .2rem .55rem; margin-top: .55rem;
+      border-radius: var(--radius-full); background: var(--accent-bg); color: var(--accent);
+      font-family: var(--font-mono); font-size: .69rem; font-weight: 600;
+    }
+    .et { font-weight: 800; font-size: var(--text-lg); margin-bottom: .5rem; font-family: var(--font-display) }
+    .eb p { color: var(--text-muted) }
+    .eb ul { margin: .7rem 0 0 1.1rem; color: var(--text-muted) }
+    .eb li { margin-bottom: .45rem }
+    .eb strong { color: var(--text); font-weight: 600 }
 
     /* PROJECTS */
-    .pg{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
-    .proj{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:var(--space-3);transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
-    .proj:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--border));box-shadow:var(--sh-md);transform:translateY(-2px)}
-    .pt{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3)}
-    .pi{width:42px;height:42px;border-radius:var(--radius-lg);background:var(--accent-bg);display:grid;place-items:center;flex-shrink:0;font-size:1.2rem}
-    .pc{font-family:var(--font-mono);font-size:.69rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
-    .proj p{color:var(--text-muted);font-size:var(--text-sm);flex:1;line-height:1.6}
-    .ps{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem}
-    .pst{font-family:var(--font-mono);font-size:.68rem;padding:.25rem .55rem;border-radius:var(--radius-full);background:var(--surface-2);border:1px solid var(--border);color:var(--text-muted)}
-    .pl{align-self:flex-start;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);display:inline-flex;align-items:center;gap:.3rem;border-bottom:1px solid var(--divider);padding-bottom:.15rem;transition:color var(--ease),border-color var(--ease)}
-    .pl:hover{color:var(--accent);border-color:var(--accent)}
+    .pg { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4) }
+    .proj {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl);
+      padding: var(--space-6); box-shadow: var(--sh-sm);
+      display: flex; flex-direction: column; gap: var(--space-3);
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+    }
+    .proj:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); box-shadow: var(--sh-md); transform: translateY(-2px) }
+    .pt { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3) }
+    .pi {
+      width: 42px; height: 42px; border-radius: var(--radius-lg);
+      background: var(--accent-bg); display: grid; place-items: center;
+      flex-shrink: 0; color: var(--accent);
+    }
+    .pc { font-family: var(--font-mono); font-size: .69rem; color: var(--accent); text-transform: uppercase; letter-spacing: .08em }
+    .proj p { color: var(--text-muted); font-size: var(--text-sm); flex: 1; line-height: 1.6 }
+    .ps { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .2rem }
+    .pst { font-family: var(--font-mono); font-size: .68rem; padding: .25rem .55rem; border-radius: var(--radius-full); background: var(--surface-2); border: 1px solid var(--border); color: var(--text-muted) }
+    .pl {
+      align-self: flex-start; font-family: var(--font-mono); font-size: var(--text-xs);
+      color: var(--text-muted); display: inline-flex; align-items: center; gap: .3rem;
+      border-bottom: 1px solid var(--divider); padding-bottom: .15rem;
+      transition: color var(--ease), border-color var(--ease);
+    }
+    .pl:hover { color: var(--accent); border-color: var(--accent) }
 
-    /* SKILLS */
-    .sk-g{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
-    .sk-b{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5)}
-    .sk-b h3{font-size:var(--text-sm);margin-bottom:var(--space-3)}
-    .sk-chips{display:flex;flex-wrap:wrap;gap:.4rem}
-    .sc{font-family:var(--font-mono);font-size:.69rem;padding:.28rem .58rem;border-radius:var(--radius-full);border:1px solid var(--border);color:var(--text-muted);background:var(--surface-2)}
+    /* SKILLS — visual bars */
+    .sk-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4) }
+    .sk-b { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5) }
+    .sk-b h3 { font-size: var(--text-sm); margin-bottom: var(--space-4) }
+    .sk-item { margin-bottom: .7rem }
+    .sk-item:last-child { margin-bottom: 0 }
+    .sk-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .3rem }
+    .sk-name { font-family: var(--font-mono); font-size: .72rem; color: var(--text-muted) }
+    .sk-track { height: 3px; background: var(--surface-2); border-radius: 2px; overflow: hidden }
+    .sk-fill { height: 100%; background: var(--accent); border-radius: 2px; transform-origin: left; animation: barIn .6s cubic-bezier(.16,1,.3,1) both; animation-delay: var(--d, 0ms) }
+    @keyframes barIn { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+    .sk-chips { display: flex; flex-wrap: wrap; gap: .4rem }
+    .sc { font-family: var(--font-mono); font-size: .69rem; padding: .28rem .58rem; border-radius: var(--radius-full); border: 1px solid var(--border); color: var(--text-muted); background: var(--surface-2) }
 
-    /* CONTACT */
-    .ct-g{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--space-5);align-items:start}
-    .cm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:var(--space-8);box-shadow:var(--sh-md)}
-    .cm h2{margin-bottom:var(--space-3)}
-    .cm p{color:var(--text-muted);max-width:50ch;margin-bottom:var(--space-6)}
-    .cs{display:grid;gap:var(--space-3)}
-    .cr{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-4) var(--space-5);display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);transition:border-color var(--ease)}
-    .cr:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--border))}
-    .cr-l{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint);text-transform:uppercase;letter-spacing:.07em}
-    .cr-v{font-weight:600;font-size:var(--text-sm)}
-    .arr{color:var(--text-faint);font-size:.85rem}
+    /* CONTACT — streamlined */
+    .ct-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-6); align-items: start }
+    .cm { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-8); box-shadow: var(--sh-md) }
+    .cm h2 { margin-bottom: var(--space-3) }
+    .cm p { color: var(--text-muted); max-width: 50ch; margin-bottom: var(--space-6) }
+    .cs { display: grid; gap: var(--space-3) }
+    .cr {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl);
+      padding: var(--space-4) var(--space-5); display: flex; justify-content: space-between;
+      align-items: center; gap: var(--space-4); transition: border-color var(--ease), transform var(--ease);
+    }
+    .cr:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); transform: translateX(3px) }
+    .cr-ico { width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--accent-bg); display: grid; place-items: center; flex-shrink: 0; color: var(--accent) }
+    .cr-body { flex: 1 }
+    .cr-l { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-faint); text-transform: uppercase; letter-spacing: .07em }
+    .cr-v { font-weight: 600; font-size: var(--text-sm) }
+    .arr { color: var(--text-faint); font-size: .85rem; transition: color var(--ease) }
+    .cr:hover .arr { color: var(--accent) }
 
     /* FOOTER */
-    footer{padding:var(--space-8) 0 var(--space-12);border-top:1px solid var(--divider)}
-    .fi{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap}
-    .fi p,.fl a{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint)}
-    .fl{display:flex;gap:var(--space-5)}
-    .fl a{transition:color var(--ease)}
-    .fl a:hover{color:var(--accent)}
+    footer { padding: var(--space-8) 0 var(--space-12); border-top: 1px solid var(--divider) }
+    .fi { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); flex-wrap: wrap }
+    .fi-left { display: flex; flex-direction: column; gap: .3rem }
+    .fi p, .fl a { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-faint) }
+    .fi-tagline { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-faint); font-style: italic }
+    .fl { display: flex; gap: var(--space-5) }
+    .fl a { transition: color var(--ease) }
+    .fl a:hover { color: var(--accent) }
 
     /* SCROLL REVEAL */
-    .r{opacity:1}
-    @supports (animation-timeline:scroll()){
-      .r{opacity:0;animation:rf linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
-      @keyframes rf{to{opacity:1}}
+    .r { opacity: 1 }
+    @supports (animation-timeline:scroll()) {
+      .r { opacity: 0; animation: rf linear both; animation-timeline: view(); animation-range: entry 0% entry 55% }
+      @keyframes rf { to { opacity: 1 } }
     }
-    @media(prefers-reduced-motion:reduce){
-      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-      html{scroll-behavior:auto}
-      .r{opacity:1}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important }
+      html { scroll-behavior: auto }
+      .r { opacity: 1 }
     }
 
     /* RESPONSIVE */
-    @media(max-width:1024px){
-      .hero-g{grid-template-columns:1fr}.hc{display:none}
-      .cw7,.cw5{grid-column:span 12}.cw4{grid-column:span 6}
-      .sk-g{grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 1024px) {
+      .hero-g { grid-template-columns: 1fr } .term { display: none }
+      .cw7,.cw5 { grid-column: span 12 } .cw4 { grid-column: span 6 }
+      .sk-g { grid-template-columns: repeat(2, 1fr) }
     }
-    @media(max-width:768px){
-      .si,.ct-g{grid-template-columns:1fr}
-      .ec{grid-template-columns:1fr}
-      .pg{grid-template-columns:1fr}
-      .bento{display:flex;flex-direction:column}
-      .sk-g{grid-template-columns:1fr}
-      .nav-r a:not([aria-label]):not(:last-child){display:none}
-      h1{font-size:clamp(2.8rem,10vw,4rem)}
+    @media (max-width: 768px) {
+      .si, .ct-wrap { grid-template-columns: 1fr }
+      .ec { grid-template-columns: 1fr }
+      .pg { grid-template-columns: 1fr }
+      .bento { display: flex; flex-direction: column }
+      .sk-g { grid-template-columns: 1fr }
+      .nav-r a:not([aria-label]):not(:last-child):not(.nav-resume) { display: none }
+      h1 { font-size: clamp(2.8rem, 10vw, 4rem) }
     }
-    @media(max-width:480px){
-      .wrap{width:calc(100% - 1.5rem)}
-      .btns .btn{flex:1;justify-content:center}
-      .cr{flex-direction:column;align-items:flex-start}
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 1.5rem) }
+      .btns .btn { flex: 1; justify-content: center }
+      .cr { flex-direction: column; align-items: flex-start }
     }
   </style>
 </head>
 <body>
+  <div id="progress" role="progressbar" aria-label="Page scroll progress"></div>
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="nav-shell">
@@ -225,10 +353,16 @@
           Shreyas Raorane
         </a>
         <div class="nav-r">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-nav>About</a>
+          <a href="#experience" data-nav>Experience</a>
+          <a href="#projects" data-nav>Projects</a>
+          <a href="#contact" data-nav>Contact</a>
+          <a class="nav-resume" href="#" aria-label="Download resume PDF">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
+            </svg>
+            Resume
+          </a>
           <button class="t-btn" data-theme-toggle aria-label="Toggle dark/light mode">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="ticon">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -247,30 +381,47 @@
           <div>
             <div class="ey"><span class="ey-dot" aria-hidden="true"></span>Philadelphia, PA &nbsp;·&nbsp; M.S.E. Robotics @ UPenn &nbsp;·&nbsp; Open to 2026 roles</div>
             <h1>Robots that work when conditions <em>break.</em></h1>
-            <p class="hero-p">I'm a robotics software engineer specializing in multi-agent coordination, motion planning, and systems that hold up under real-world constraints. Currently at Penn's GRASP Lab, where my thesis work centers on decentralized fleet coordination that stays functional even under communication failure — and building production-grade autonomy software alongside it.</p>
+            <p class="hero-p">Robotics software engineer specializing in multi-agent coordination, motion planning, and systems that hold up under real-world constraints. Currently at Penn's GRASP Lab, where my thesis work focuses on decentralized fleet coordination that stays functional under communication failure.</p>
             <div class="btns">
               <a class="btn bp" href="#projects">See my work</a>
+              <a class="btn btn-dl" href="#">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
+                </svg>
+                Resume PDF
+              </a>
               <a class="btn bg" href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
               <a class="btn bg" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             </div>
           </div>
-          <aside class="hc" aria-label="Quick profile">
-            <div>
-              <div class="sl" style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;">Currently</div>
-              <p style="font-weight:700;font-size:var(--text-base);margin-top:.4rem;line-height:1.4;">GRASP Lab thesis on decentralized multi-robot coordination for warehouse automation.</p>
-            </div>
-            <div class="sg">
-              <div class="sb"><div class="sl">School</div><div class="sv">UPenn MSE</div></div>
-              <div class="sb"><div class="sl">Lab</div><div class="sv">GRASP Lab</div></div>
-              <div class="sb"><div class="sl">GPA</div><div class="sv">3.84 / 4.0</div></div>
-              <div class="sb"><div class="sl">Grad</div><div class="sv">Jun 2026</div></div>
-            </div>
-            <div>
-              <div class="sl" style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.55rem;">Core stack</div>
-              <div class="chips">
-                <span class="chip">C++</span><span class="chip">Python</span><span class="chip">ROS2</span>
-                <span class="chip">MPC</span><span class="chip">Multi-agent</span><span class="chip">Planning</span>
+
+          <!-- TERMINAL CARD — replaces the boring stats widget -->
+          <aside class="term" aria-label="Quick profile">
+            <div class="term-bar">
+              <div class="term-bar-left">
+                <span class="term-title">shreyas@grasp-lab: ~/profile</span>
               </div>
+              <div class="term-bar-right">
+                <span class="t-wbtn">─</span>
+                <span class="t-wbtn">□</span>
+                <span class="t-wbtn">✕</span>
+              </div>
+            </div>
+            <div class="term-body">
+              <div class="tl"><span class="p">$</span><span class="cmd">g++ -o profile profile.cpp &amp;&amp; ./profile</span></div>
+              <div class="tl"><span class="out"><span class="kw">#include</span> <span class="str">&lt;string&gt;</span></span></div>
+              <div class="tl"><span class="out"><span class="kw">struct</span> <span class="val">Raorane</span> {</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;std::string school &nbsp;= <span class="str">"UPenn MSE"</span>;</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;std::string lab &nbsp;&nbsp;&nbsp;&nbsp;= <span class="str">"GRASP Lab"</span>;</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;<span class="kw">float</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gpa &nbsp;&nbsp;&nbsp;&nbsp;= <span class="num">3.84f</span>;</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;std::string grad &nbsp;&nbsp;&nbsp;= <span class="str">"Jun 2026"</span>;</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;std::vector&lt;std::string&gt; stack = {</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"C++"</span>, <span class="str">"ROS2"</span>,</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"MPC"</span>, <span class="str">"Multi-agent"</span></span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;};</span></div>
+              <div class="tl"><span class="out">}; <span class="cmt">// thesis: decentralized</span></span></div>
+              <div class="tl"><span class="out"><span class="cmt">&nbsp;&nbsp; // multi-robot coordination</span></span></div>
+              <div class="tl"><span class="p">$</span><span class="term-cursor"></span></div>
             </div>
           </aside>
         </div>
@@ -283,19 +434,19 @@
     <section id="about">
       <div class="wrap">
         <div class="si r">
-          <div><div class="sl2">About</div><h2>Systems thinking, end to end.</h2></div>
-          <p>My background bridges algorithm research and production software engineering — two things that rarely coexist in a single profile. That combination is what I bring to hard robotics problems.</p>
+          <div><div class="sl2">About</div><h2>Systems thinking, end to end</h2></div>
+          <p>My background bridges algorithm research and production software engineering. These two things rarely coexist in a single profile, and that combination is what I bring to hard robotics problems.</p>
         </div>
         <div class="bento">
           <article class="bc cw7 r">
             <div class="sl2">Research direction</div>
             <h3>Why distributed coordination?</h3>
-            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on GCBBA, on distributed MPC for quadrotors, and on event-driven replanning under partial connectivity.</p>
+            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on GCBBA, distributed MPC for quadrotors, and event-driven replanning under partial connectivity.</p>
           </article>
           <article class="bc cw5 r">
-            <div class="sl2">Research interest</div>
+            <div class="sl2">Research focus</div>
             <h3>Decentralized multi-agent systems</h3>
-            <p>Task allocation, consensus-based coordination, and communication-aware planning — especially where real-world constraints like intermittent links, timing failures, and partial observability make textbook solutions break down.</p>
+            <p>Task allocation, consensus-based coordination, and communication-aware planning, especially in cases where intermittent links, timing failures, and partial observability make textbook solutions break down.</p>
           </article>
           <article class="bc cw4 r">
             <div class="sl2">Industry</div>
@@ -325,7 +476,7 @@
     <section id="experience">
       <div class="wrap">
         <div class="si r">
-          <div><div class="sl2">Experience</div><h2>Where I've worked.</h2></div>
+          <div><div class="sl2">Experience</div><h2>Where I've worked</h2></div>
           <p>Research and industry experience across robotics simulation, production software, and multi-robot planning — with a focus on systems that hold up under real constraints.</p>
         </div>
         <div class="exp-l">
@@ -389,17 +540,23 @@
     <section id="projects">
       <div class="wrap">
         <div class="si r">
-          <div><div class="sl2">Projects</div><h2>Selected technical work.</h2></div>
-          <p>Four projects across my core areas: distributed coordination, model predictive control, adaptive motion planning, and end-to-end ROS2 autonomy stacks.</p>
+          <div><div class="sl2">Projects</div><h2>Selected technical work</h2></div>
+          <p>Four projects across core areas: distributed coordination, model predictive control, adaptive motion planning, and end-to-end ROS2 autonomy stacks.</p>
         </div>
         <div class="pg">
           <article class="proj r">
             <div class="pt">
-              <div class="pi" aria-hidden="true">🤖</div>
+              <!-- Clean SVG icon instead of emoji -->
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="5" height="7" rx="1"/><rect x="16" y="11" width="5" height="7" rx="1"/>
+                  <path d="M8 15h8M12 11V7"/><circle cx="12" cy="5" r="2"/>
+                </svg>
+              </div>
               <div class="pc">Multi-agent · Thesis</div>
             </div>
             <h3>GCBBA Warehouse System</h3>
-            <p>Decentralized task allocation for warehouse automation. Consensus-based distributed bidding with A* collision avoidance and event-driven replanning — stays functional even when communication graphs become disconnected, where centralized baselines drop to zero.</p>
+            <p>Decentralized task allocation for warehouse automation. Consensus-based distributed bidding with A* collision avoidance and event-driven replanning that stays functional even when communication graphs become disconnected, where centralized baselines drop to zero.</p>
             <div class="ps">
               <span class="pst">87–100% task completion</span>
               <span class="pst">6 robots · 80 tasks</span>
@@ -409,7 +566,13 @@
           </article>
           <article class="proj r">
             <div class="pt">
-              <div class="pi" aria-hidden="true">🚁</div>
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L8 8H4l4 3-2 5 6-4 6 4-2-5 4-3h-4z"/>
+                  <circle cx="12" cy="16" r="2"/>
+                  <path d="M7 20h10"/>
+                </svg>
+              </div>
               <div class="pc">Controls · Multi-robot</div>
             </div>
             <h3>SwarmSync</h3>
@@ -423,7 +586,14 @@
           </article>
           <article class="proj r">
             <div class="pt">
-              <div class="pi" aria-hidden="true">🗺️</div>
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h2M19 12h2M12 3v2M12 19v2"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+                  <path d="M8 12h1M15 12h1" opacity=".4"/>
+                </svg>
+              </div>
               <div class="pc">Motion planning</div>
             </div>
             <h3>SBAMP</h3>
@@ -437,7 +607,13 @@
           </article>
           <article class="proj r">
             <div class="pt">
-              <div class="pi" aria-hidden="true">🏎️</div>
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="14" width="20" height="6" rx="2"/>
+                  <path d="M6 14V9a6 6 0 0 1 12 0v5"/>
+                  <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                </svg>
+              </div>
               <div class="pc">ROS2 · Autonomy</div>
             </div>
             <h3>F1/10 Autonomous Racing Stack</h3>
@@ -455,19 +631,21 @@
 
     <hr class="d">
 
-    <!-- SKILLS -->
+    <!-- SKILLS — with visual proficiency bars for primary languages -->
     <section>
       <div class="wrap">
         <div class="si r">
-          <div><div class="sl2">Skills</div><h2>Technical toolkit.</h2></div>
-          <p>Core languages, robotics tools, and systems knowledge built across research, internships, and coursework at UPenn and beyond.</p>
+          <div><div class="sl2">Skills</div><h2>Technical toolkit</h2></div>
+          <p>Core languages, robotics tools, and systems knowledge built across research, internships, and coursework at UPenn.</p>
         </div>
         <div class="sk-g r">
           <div class="sk-b">
             <h3>Languages</h3>
-            <div class="sk-chips">
-              <span class="sc">C++</span><span class="sc">Python</span><span class="sc">MATLAB</span><span class="sc">JavaScript</span><span class="sc">SQL</span>
-            </div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">C++</span></div><div class="sk-track"><div class="sk-fill" style="width:90%;--d:0ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">Python</span></div><div class="sk-track"><div class="sk-fill" style="width:95%;--d:60ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">MATLAB</span></div><div class="sk-track"><div class="sk-fill" style="width:70%;--d:120ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">JavaScript</span></div><div class="sk-track"><div class="sk-fill" style="width:60%;--d:180ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">SQL</span></div><div class="sk-track"><div class="sk-fill" style="width:65%;--d:240ms"></div></div></div>
           </div>
           <div class="sk-b">
             <h3>Planning &amp; Control</h3>
@@ -505,35 +683,61 @@
 
     <hr class="d">
 
-    <!-- CONTACT -->
+    <!-- CONTACT — streamlined, no redundancy -->
     <section id="contact">
       <div class="wrap">
-        <div class="ct-g">
+        <div class="ct-wrap">
           <div class="cm r">
             <div class="sl2">Contact</div>
-            <h2>Let's talk robots.</h2>
-            <p>I'm looking for robotics software, autonomy, and multi-robot systems roles starting summer/fall 2026. Happy to chat about work, research, or projects.</p>
+            <h2>Let's talk robots</h2>
+            <p>Looking for robotics software, autonomy, and multi-robot systems roles starting summer/fall 2026. Happy to chat about work, research, or projects.</p>
             <div class="btns">
-              <a class="btn bp" href="mailto:raorane@seas.upenn.edu">Send an email</a>
-              <a class="btn bg" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a class="btn bp" href="/cdn-cgi/l/email-protection#dcaebdb3aebdb2b99cafb9bdaff2a9acb9b2b2f2b9b8a9">Send an email</a>
+              <a class="btn btn-dl" href="#">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
+                </svg>
+                Resume PDF
+              </a>
             </div>
           </div>
           <div class="cs r">
-            <a class="cr" href="mailto:raorane@seas.upenn.edu">
-              <div><div class="cr-l">Email</div><div class="cr-v">raorane@seas.upenn.edu</div></div>
+            <a class="cr" href="/cdn-cgi/l/email-protection#e193808e93808f84a192848092cf9491848f8fcf848594">
+              <div class="cr-ico" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="cr-body">
+                <div class="cr-l">Email</div>
+                <div class="cr-v"><span class="__cf_email__" data-cfemail="7705161805161912370412160459020712191959121302">[email&#160;protected]</span></div>
+              </div>
               <span class="arr">→</span>
             </a>
             <a class="cr" href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">
-              <div><div class="cr-l">GitHub</div><div class="cr-v">Shreyas0812</div></div>
+              <div class="cr-ico" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <div class="cr-body">
+                <div class="cr-l">GitHub</div>
+                <div class="cr-v">Shreyas0812</div>
+              </div>
               <span class="arr">→</span>
             </a>
             <a class="cr" href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">
-              <div><div class="cr-l">LinkedIn</div><div class="cr-v">shreyas-raorane</div></div>
+              <div class="cr-ico" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="cr-body">
+                <div class="cr-l">LinkedIn</div>
+                <div class="cr-v">shreyas-raorane</div>
+              </div>
               <span class="arr">→</span>
             </a>
-            <div class="cr">
-              <div><div class="cr-l">Location</div><div class="cr-v">Philadelphia, PA</div></div>
-            </div>
           </div>
         </div>
       </div>
@@ -543,32 +747,64 @@
   <footer>
     <div class="wrap">
       <div class="fi">
-        <p>© 2026 Shreyas Raorane</p>
+        <div class="fi-left">
+          <p>© 2026 Shreyas Raorane</p>
+          <span class="fi-tagline">Building autonomy that holds up when it counts.</span>
+        </div>
         <div class="fl">
           <a href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:raorane@seas.upenn.edu">Email</a>
+          <a href="/cdn-cgi/l/email-protection#b6c4d7d9c4d7d8d3f6c5d3d7c598c3c6d3d8d898d3d2c3">Email</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Theme
   (function(){
-    var root=document.documentElement;
-    var btn=document.querySelector('[data-theme-toggle]');
-    var icon=document.getElementById('ticon');
-    var DARK='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
-    var LIGHT='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
-    var t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
-    root.setAttribute('data-theme',t);
-    if(icon)icon.innerHTML=t==='dark'?DARK:LIGHT;
-    if(btn)btn.addEventListener('click',function(){
-      t=t==='dark'?'light':'dark';
-      root.setAttribute('data-theme',t);
-      if(icon)icon.innerHTML=t==='dark'?DARK:LIGHT;
-      btn.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' mode');
+    var root = document.documentElement;
+    var btn = document.querySelector('[data-theme-toggle]');
+    var icon = document.getElementById('ticon');
+    var DARK = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    var LIGHT = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    var t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', t);
+    if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
+    if (btn) btn.addEventListener('click', function(){
+      t = t === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', t);
+      if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
+      btn.setAttribute('aria-label', 'Switch to ' + (t==='dark'?'light':'dark') + ' mode');
     });
+  })();
+
+  // Scroll progress bar
+  (function(){
+    var bar = document.getElementById('progress');
+    function update(){
+      var h = document.documentElement;
+      var pct = (h.scrollTop || document.body.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, {passive: true});
+    update();
+  })();
+
+  // Active nav scrollspy
+  (function(){
+    var sections = document.querySelectorAll('section[id]');
+    var links = document.querySelectorAll('[data-nav]');
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(l){ l.classList.remove('active') });
+          var active = document.querySelector('[data-nav][href="#' + e.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function(s){ observer.observe(s) });
   })();
   </script>
 </body>
