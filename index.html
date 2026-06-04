@@ -357,7 +357,7 @@
           <a href="#experience" data-nav>Experience</a>
           <a href="#projects" data-nav>Projects</a>
           <a href="#contact" data-nav>Contact</a>
-          <a class="nav-resume" href="./Raorane_Resume.pdf" download="Raorane_Resume.pdf" aria-label="Download resume PDF">
+          <a class="nav-resume" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf" aria-label="Download resume PDF">
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
             </svg>
@@ -384,7 +384,7 @@
             <p class="hero-p">Robotics software engineer specializing in multi-agent coordination, motion planning, and systems that hold up under real-world constraints. Currently at Penn's GRASP Lab, where my thesis work focuses on decentralized fleet coordination that stays functional under communication failure.</p>
             <div class="btns">
               <a class="btn bp" href="#projects">See my work</a>
-              <a class="btn btn-dl" href="./Raorane_Resume.pdf" download="Raorane_Resume.pdf">
+              <a class="btn btn-dl" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
                 </svg>
@@ -395,7 +395,7 @@
             </div>
           </div>
 
-          <!-- TERMINAL CARD — replaces the boring stats widget -->
+          <!-- TERMINAL CARD -->
           <aside class="term" aria-label="Quick profile">
             <div class="term-bar">
               <div class="term-bar-left">
@@ -413,7 +413,7 @@
               <div class="tl"><span class="out"><span class="kw">struct</span> <span class="val">Raorane</span> {</span></div>
               <div class="tl"><span class="out">&nbsp;&nbsp;std::string school &nbsp;= <span class="str">"UPenn MSE"</span>;</span></div>
               <div class="tl"><span class="out">&nbsp;&nbsp;std::string lab &nbsp;&nbsp;&nbsp;&nbsp;= <span class="str">"GRASP Lab"</span>;</span></div>
-              <div class="tl"><span class="out">&nbsp;&nbsp;<span class="kw">float</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gpa &nbsp;&nbsp;&nbsp;&nbsp;= <span class="num">3.84f</span>;</span></div>
+              <div class="tl"><span class="out">&nbsp;&nbsp;<span class="kw">float</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gpa &nbsp;&nbsp;&nbsp;&nbsp;= <span class="num">3.80f</span>;</span></div>
               <div class="tl"><span class="out">&nbsp;&nbsp;std::string grad &nbsp;&nbsp;&nbsp;= <span class="str">"Jun 2026"</span>;</span></div>
               <div class="tl"><span class="out">&nbsp;&nbsp;std::vector&lt;std::string&gt; stack = {</span></div>
               <div class="tl"><span class="out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"C++"</span>, <span class="str">"ROS2"</span>,</span></div>
@@ -441,7 +441,7 @@
           <article class="bc cw7 r">
             <div class="sl2">Research direction</div>
             <h3>Why distributed coordination?</h3>
-            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on GCBBA, distributed MPC for quadrotors, and event-driven replanning under partial connectivity.</p>
+            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on LCBA, distributed MPC for quadrotors, and event-driven replanning under partial connectivity.</p>
           </article>
           <article class="bc cw5 r">
             <div class="sl2">Research focus</div>
@@ -489,11 +489,11 @@
             </div>
             <div class="eb">
               <div class="et">Graduate Researcher — M.S.E. Thesis</div>
-              <p>Advisors: Prof. Linh Phan &amp; Prof. Rahul Mangharam. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
+              <p>Advisors: Prof. Linh Phan, Prof. Rahul Mangharam, and Prof. M. Ani Hsieh. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
               <ul>
-                <li>Designed a <strong>consensus-based distributed task allocation framework (GCBBA)</strong> achieving 87–100% task completion where centralized baselines collapse to zero under network partitioning.</li>
+                <li>Designed <strong>LCBA (Local Consensus Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamic communication graphs, maintaining non-zero task completion where CBBA and SGA baselines drop to zero.</li>
                 <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
-                <li>Validated on a 30×30 grid with <strong>6 robots and 80 concurrent tasks</strong> across full and degraded connectivity.</li>
+                <li>Integrated LCBA with three interchangeable path planners (Cooperative A*, PBS, RHCR); evaluated across six maps from 6 to 200 agents over 432+ runs, achieving a <strong>0.91 makespan ratio</strong> vs. centralized SGA.</li>
               </ul>
             </div>
           </article>
@@ -509,8 +509,8 @@
               <p>Developed production-grade C++ simulation infrastructure for warehouse automation, where timing accuracy and correctness under concurrency directly affected downstream control systems.</p>
               <ul>
                 <li>Built a <strong>multi-threaded discrete-event simulation</strong> managing 1,000+ parallel material flow events with shared state across 3 concurrent threads.</li>
-                <li>Developed a <strong>time-critical scheduling engine</strong> with sub-millisecond timing accuracy for production actuation sequence validation.</li>
-                <li>Refactored legacy codebase with shared header architecture, cutting integration overhead by <strong>60%</strong>.</li>
+                <li>Developed a <strong>time-critical scheduling engine</strong> completing actuation sequences within a few milliseconds, modeling real hardware timing for production validation.</li>
+                <li>Refactored legacy codebase with a shared header architecture and centralized SimulationHandler, letting the team validate against the simulator instead of waiting for limited physical hardware.</li>
               </ul>
             </div>
           </article>
@@ -523,9 +523,9 @@
             </div>
             <div class="eb">
               <div class="et">Software Development Engineer</div>
-              <p>Full-stack engineering across frontend, backend, and data layers on enterprise-scale production software. Shipped features through CI/CD pipelines on a 20-person agile team.</p>
+              <p>Full-stack engineering across frontend, backend, and data layers on enterprise-scale production software. Shipped features through CI/CD pipelines on an agile team.</p>
               <ul>
-                <li>Built <strong>10 Angular components</strong> and optimized 40 PostgreSQL queries for Verizon's ESAP Migration Project — reduced response time by <strong>35%</strong> across 10,000 users.</li>
+                <li>Delivered production software for Verizon's ESAP Migration Project (10,000+ users); optimized 40+ PostgreSQL queries, reducing response time by <strong>35%</strong>.</li>
                 <li>Worked across the full application stack with peer code review and Agile/SAFe delivery.</li>
               </ul>
             </div>
@@ -546,7 +546,6 @@
         <div class="pg">
           <article class="proj r">
             <div class="pt">
-              <!-- Clean SVG icon instead of emoji -->
               <div class="pi" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="11" width="5" height="7" rx="1"/><rect x="16" y="11" width="5" height="7" rx="1"/>
@@ -555,11 +554,11 @@
               </div>
               <div class="pc">Multi-agent · Thesis</div>
             </div>
-            <h3>GCBBA Warehouse System</h3>
-            <p>Decentralized task allocation for warehouse automation. Consensus-based distributed bidding with A* collision avoidance and event-driven replanning that stays functional even when communication graphs become disconnected, where centralized baselines drop to zero.</p>
+            <h3>LCBA Warehouse System</h3>
+            <p>Decentralized task allocation for warehouse automation. LCBA extends GCBBA with component-local consensus and event-driven replanning that stays functional even when communication graphs become disconnected, where centralized baselines drop to zero. Integrates Cooperative A*, PBS, and RHCR planners.</p>
             <div class="ps">
-              <span class="pst">87–100% task completion</span>
-              <span class="pst">6 robots · 80 tasks</span>
+              <span class="pst">0.91 makespan ratio</span>
+              <span class="pst">6–200 agents · 432+ runs</span>
               <span class="pst">Python</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/GCBBA-Warehouse-System" target="_blank" rel="noopener noreferrer">View repository ↗</a>
@@ -576,10 +575,10 @@
               <div class="pc">Controls · Multi-robot</div>
             </div>
             <h3>SwarmSync</h3>
-            <p>Distributed MPC for quadrotor swarms. QP-backed collision-free trajectory generation across 8 UAVs with dynamic obstacle handling and adaptive goal tracking — 95% mission success in simulation with 30% reduced completion time.</p>
+            <p>Distributed MPC for quadrotor swarms. QP-backed collision-free trajectory generation across 8+ quadrotors with dynamic obstacle handling; agents reliably reached goals in simulation, degrading only in extremely dense environments.</p>
             <div class="ps">
-              <span class="pst">95% mission success</span>
-              <span class="pst">8 quadrotors</span>
+              <span class="pst">8+ quadrotors</span>
+              <span class="pst">QP optimization</span>
               <span class="pst">Python · DMPC</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/SwarmSync" target="_blank" rel="noopener noreferrer">View repository ↗</a>
@@ -597,10 +596,10 @@
               <div class="pc">Motion planning</div>
             </div>
             <h3>SBAMP</h3>
-            <p>Sampling-based adaptive motion planner integrating RRT with dynamical systems attractors. Achieves 85% faster replanning than static RRT baselines while maintaining real-time goal tracking on mobile robots.</p>
+            <p>Sampling-based adaptive motion planner integrating RRT* with dynamical systems attractors. Replans fast enough to track moving goals in real time at speeds where the static RRT* baseline could not keep up.</p>
             <div class="ps">
-              <span class="pst">85% faster replanning</span>
-              <span class="pst">RRT + DS attractors</span>
+              <span class="pst">Real-time goal tracking</span>
+              <span class="pst">RRT* + DS attractors</span>
               <span class="pst">Python</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/SBAMP" target="_blank" rel="noopener noreferrer">View repository ↗</a>
@@ -617,13 +616,13 @@
               <div class="pc">ROS2 · Autonomy</div>
             </div>
             <h3>F1/10 Autonomous Racing Stack</h3>
-            <p>Full ROS2 autonomy stack for the F1/10 platform: perception, localization, planning, and a live Gradio tuning interface that reduced iteration time by 70%. Paired with pick-and-place on a 7-DOF Franka Panda arm using IK + RRT (90% grasp success).</p>
+            <p>Full ROS2 autonomy stack for the F1/10 platform: perception, localization, and planning over LIDAR, IMU, and RGB-D data, bridging the AutoDRIVE Simulator and F1/10 hardware over a shared message interface with a live tuning interface replacing the recompile-and-redeploy loop.</p>
             <div class="ps">
-              <span class="pst">70% faster tuning</span>
-              <span class="pst">ROS2 · SLAM</span>
+              <span class="pst">LIDAR · IMU · RGB-D</span>
+              <span class="pst">AutoDRIVE + hardware</span>
               <span class="pst">Python · C++</span>
             </div>
-            <a class="pl" href="https://github.com/Shreyas0812/roboracer-autodrive-ws" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            <a class="pl" href="https://github.com/Shreyas0812/roboracer-ws" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
         </div>
       </div>
@@ -631,7 +630,7 @@
 
     <hr class="d">
 
-    <!-- SKILLS — with visual proficiency bars for primary languages -->
+    <!-- SKILLS -->
     <section>
       <div class="wrap">
         <div class="si r">
@@ -650,19 +649,19 @@
           <div class="sk-b">
             <h3>Planning &amp; Control</h3>
             <div class="sk-chips">
-              <span class="sc">RRT / RRT*</span><span class="sc">A*</span><span class="sc">MPC / DMPC</span><span class="sc">SLAM</span><span class="sc">Sensor fusion</span><span class="sc">IK</span>
+              <span class="sc">RRT / RRT*</span><span class="sc">A*</span><span class="sc">MPC / DMPC</span><span class="sc">QP optimization</span><span class="sc">Localization</span><span class="sc">IK</span>
             </div>
           </div>
           <div class="sk-b">
             <h3>Multi-agent</h3>
             <div class="sk-chips">
-              <span class="sc">Consensus algorithms</span><span class="sc">Task allocation</span><span class="sc">GCBBA / CBBA</span><span class="sc">Fleet coordination</span>
+              <span class="sc">Consensus algorithms</span><span class="sc">Task allocation</span><span class="sc">LCBA / GCBBA / CBBA</span><span class="sc">Fleet coordination</span>
             </div>
           </div>
           <div class="sk-b">
             <h3>Robotics tools</h3>
             <div class="sk-chips">
-              <span class="sc">ROS2</span><span class="sc">Gazebo</span><span class="sc">PyBullet</span><span class="sc">OpenCV</span><span class="sc">Foxglove</span><span class="sc">AutoDRIVE</span>
+              <span class="sc">ROS2</span><span class="sc">Gazebo</span><span class="sc">PyBullet</span><span class="sc">Foxglove</span><span class="sc">AutoDRIVE</span>
             </div>
           </div>
           <div class="sk-b">
@@ -672,9 +671,9 @@
             </div>
           </div>
           <div class="sk-b">
-            <h3>ML &amp; Infra</h3>
+            <h3>Tools &amp; Infra</h3>
             <div class="sk-chips">
-              <span class="sc">PyTorch</span><span class="sc">TensorFlow</span><span class="sc">Docker</span><span class="sc">Git</span><span class="sc">CI/CD</span><span class="sc">Linux</span>
+              <span class="sc">Docker</span><span class="sc">Git</span><span class="sc">CI/CD</span><span class="sc">Linux</span>
             </div>
           </div>
         </div>
@@ -683,7 +682,7 @@
 
     <hr class="d">
 
-    <!-- CONTACT — streamlined, no redundancy -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="wrap">
         <div class="ct-wrap">
@@ -693,7 +692,7 @@
             <p>Looking for robotics software, autonomy, and multi-robot systems roles starting summer/fall 2026. Happy to chat about work, research, or projects.</p>
             <div class="btns">
               <button class="btn bp" id="copy-email-btn" onclick="copyEmail()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Send an email</button>
-              <a class="btn btn-dl" href="./Raorane_Resume.pdf" download="Raorane_Resume.pdf">
+              <a class="btn btn-dl" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
                 </svg>
@@ -754,21 +753,23 @@
         <div class="fl">
           <a href="https://github.com/Shreyas0812" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/shreyas-raorane" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="/cdn-cgi/l/email-protection#88fae9e7fae9e6edc8fbede9fba6fdf8ede6e6a6edecfd">Email</a>
+          <a id="footer-email" href="#">Email</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Build email at runtime to avoid bot scraping / Cloudflare obfuscation
+  <script>
+  // Build email at runtime to reduce bot scraping
   (function(){
     var u = 'raorane', d = 'seas.upenn.edu';
     var email = u + '@' + d;
     var cr = document.getElementById('email-cr');
     var val = document.getElementById('email-val');
+    var fe = document.getElementById('footer-email');
     if (cr) { cr.href = 'mailto:' + email; cr.onclick = function(e){ e.preventDefault(); copyEmail(); }; }
     if (val) val.textContent = email;
+    if (fe) fe.href = 'mailto:' + email;
   })();
 
   // Copy email
