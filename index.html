@@ -459,8 +459,12 @@
             <p>ROS2 pipelines, perception, localization, planning, and hardware work on real platforms: F1/10 and Franka Emika Panda.</p>
           </article>
           <article class="bc cw4 r">
-            <div class="sl2">Publication</div>
-            <h3>Journal work</h3>
+            <div class="sl2">Publications</div>
+            <h3>Research output</h3>
+            <div class="pub-r">
+              <div class="pub-t"><a href="https://openreview.net/forum?id=7CiuqF99ue" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-decoration-color:var(--divider)">SBAMP: Sampling Based Adaptive Motion Planning</a></div>
+              <div class="pub-m">Raorane, Puri, Pham · ICRA Workshop on Frontiers of Optimization for Robotics · 2026</div>
+            </div>
             <div class="pub-r">
               <div class="pub-t">Towards Optimized Distributed Multi-Robot Printing: An Algorithmic Approach</div>
               <div class="pub-m">Karpe, Sinha, Raorane et al. · Journal of Intelligent Robotic Systems · 2020</div>
@@ -482,7 +486,7 @@
         <div class="exp-l">
           <article class="ec r">
             <div class="em">
-              <div class="ed">Oct 2025 – Present</div>
+              <div class="ed">Oct 2025 – May 2026</div>
               <div class="eo">UPenn GRASP Lab</div>
               <div class="eloc">Philadelphia, PA</div>
               <div class="etag">Research</div>
@@ -494,6 +498,34 @@
                 <li>Designed <strong>LCBA (Local Consensus Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamic communication graphs, maintaining non-zero task completion where CBBA and SGA baselines drop to zero.</li>
                 <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
                 <li>Integrated LCBA with three interchangeable path planners (Cooperative A*, PBS, RHCR); evaluated across six maps from 6 to 200 agents over 432+ runs, achieving a <strong>0.91 makespan ratio</strong> vs. centralized SGA.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Jan – May 2026</div>
+              <div class="eo">UPenn</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Teaching</div>
+            </div>
+            <div class="eb">
+              <div class="et">Teaching Assistant — ENM2400</div>
+              <p>Teaching assistant for Differential Equations and Linear Algebra at the University of Pennsylvania.</p>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Feb 2025 – May 2026</div>
+              <div class="eo">UPenn — Prof. Mangharam</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Research</div>
+            </div>
+            <div class="eb">
+              <div class="et">Research Assistant — F1/10 RoboRacer</div>
+              <p>RA under Prof. Rahul Mangharam, contributing to the F1/10 autonomous racing platform and its web presence.</p>
+              <ul>
+                <li>Revamped <strong>roboracer.ai</strong> — rebuilt the website from the ground up using <strong>React + TypeScript</strong> (Vite), forked from the f1tenth org and extended with 33+ commits.</li>
+                <li>Built the <strong>F1/10 ROS2 autonomy stack</strong> with full AutoDRIVE Simulator integration — bridging simulation and hardware over a shared sensor and message interface with a live tuning UI.</li>
               </ul>
             </div>
           </article>
@@ -541,7 +573,7 @@
       <div class="wrap">
         <div class="si r">
           <div><div class="sl2">Projects</div><h2>Selected technical work</h2></div>
-          <p>Four projects across core areas: distributed coordination, model predictive control, adaptive motion planning, and end-to-end ROS2 autonomy stacks.</p>
+          <p>Six projects across core areas: distributed coordination, model predictive control, adaptive motion planning, end-to-end ROS2 autonomy, manipulation on real hardware, and autonomous parking.</p>
         </div>
         <div class="pg">
           <article class="proj r">
@@ -596,13 +628,53 @@
               <div class="pc">Motion planning</div>
             </div>
             <h3>SBAMP</h3>
-            <p>Sampling-based adaptive motion planner integrating RRT* with dynamical systems attractors. Replans fast enough to track moving goals in real time at speeds where the static RRT* baseline could not keep up.</p>
+            <p>Sampling-based adaptive motion planner integrating RRT* with a Lyapunov-stable SEDS-inspired controller for real-time goal tracking. Replans fast enough to track moving goals at speeds where the static RRT* baseline fails; hardware-validated on RoboRacer. Published at the <strong>ICRA 2026 Workshop on Frontiers of Optimization for Robotics</strong>.</p>
             <div class="ps">
-              <span class="pst">Real-time goal tracking</span>
-              <span class="pst">RRT* + DS attractors</span>
+              <span class="pst">ICRA Workshop 2026</span>
+              <span class="pst">RRT* + Lyapunov DS</span>
+              <span class="pst">Hardware validated</span>
               <span class="pst">Python</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/SBAMP" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L8 6H4v4l-2 2 2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4z"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">Manipulation · Hardware</div>
+            </div>
+            <h3>Franka Emika Pick &amp; Place</h3>
+            <p>Full pick-and-place system on the 7-DOF Franka Emika Panda arm. Compared Direct IK (gradient descent with failsafes) vs. bidirectional RRT for trajectory planning; used AprilTag detection with a complementary filter for stable pose estimation, and predictive timing for dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
+            <div class="ps">
+              <span class="pst">IK · RRT · AprilTags</span>
+              <span class="pst">Static + dynamic blocks</span>
+              <span class="pst">Python · Gazebo</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/meam5200-group17-Franka-Emika-Pick-and-Place" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="8" width="20" height="10" rx="2"/>
+                  <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+                  <circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">ROS2 · Control</div>
+            </div>
+            <h3>Autonomous Parallel Parking — F1/10</h3>
+            <p>Autonomous parallel parking system for the F1/10 race car platform. Waypoint-guided navigation with ROS2 and RViz pose tracking; supports manual waypoint logging and replay for precise parking maneuver execution. Containerized with Docker for reproducible deployment.</p>
+            <div class="ps">
+              <span class="pst">Waypoint navigation</span>
+              <span class="pst">ROS2 · Docker</span>
+              <span class="pst">F1/10 platform</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/parallel-parking-roboracer" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
           <article class="proj r">
             <div class="pt">
@@ -643,13 +715,13 @@
             <div class="sk-item"><div class="sk-row"><span class="sk-name">C++</span></div><div class="sk-track"><div class="sk-fill" style="width:90%;--d:0ms"></div></div></div>
             <div class="sk-item"><div class="sk-row"><span class="sk-name">Python</span></div><div class="sk-track"><div class="sk-fill" style="width:95%;--d:60ms"></div></div></div>
             <div class="sk-item"><div class="sk-row"><span class="sk-name">MATLAB</span></div><div class="sk-track"><div class="sk-fill" style="width:70%;--d:120ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">JavaScript</span></div><div class="sk-track"><div class="sk-fill" style="width:60%;--d:180ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">SQL</span></div><div class="sk-track"><div class="sk-fill" style="width:65%;--d:240ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">JavaScript</span></div><div class="sk-track"><div class="sk-fill" style="width:60%;--d:120ms"></div></div></div>
+            <div class="sk-item"><div class="sk-row"><span class="sk-name">OOP / Design Patterns</span></div><div class="sk-track"><div class="sk-fill" style="width:85%;--d:180ms"></div></div></div>
           </div>
           <div class="sk-b">
             <h3>Planning &amp; Control</h3>
             <div class="sk-chips">
-              <span class="sc">RRT / RRT*</span><span class="sc">A*</span><span class="sc">MPC / DMPC</span><span class="sc">QP optimization</span><span class="sc">Localization</span><span class="sc">IK</span>
+              <span class="sc">RRT / RRT*</span><span class="sc">A*</span><span class="sc">MPC / DMPC</span><span class="sc">QP optimization</span><span class="sc">Localization</span><span class="sc">IK</span><span class="sc">PPO</span><span class="sc">Actor-Critic</span><span class="sc">GAE</span><span class="sc">Reinforcement Learning</span>
             </div>
           </div>
           <div class="sk-b">
@@ -661,19 +733,19 @@
           <div class="sk-b">
             <h3>Robotics tools</h3>
             <div class="sk-chips">
-              <span class="sc">ROS2</span><span class="sc">Gazebo</span><span class="sc">PyBullet</span><span class="sc">Foxglove</span><span class="sc">AutoDRIVE</span>
+              <span class="sc">ROS2</span><span class="sc">Gazebo</span><span class="sc">PyBullet</span><span class="sc">Foxglove</span><span class="sc">AutoDRIVE</span><span class="sc">SLAM</span><span class="sc">Particle Filters</span>
             </div>
           </div>
           <div class="sk-b">
             <h3>Systems</h3>
             <div class="sk-chips">
-              <span class="sc">Multi-threading</span><span class="sc">Real-time systems</span><span class="sc">Discrete-event sim</span><span class="sc">Event-driven arch</span>
+              <span class="sc">Multi-threading</span><span class="sc">Real-time systems</span><span class="sc">Memory Management</span><span class="sc">Discrete-event sim</span><span class="sc">Event-driven arch</span><span class="sc">Linux</span>
             </div>
           </div>
           <div class="sk-b">
             <h3>Tools &amp; Infra</h3>
             <div class="sk-chips">
-              <span class="sc">Docker</span><span class="sc">Git</span><span class="sc">CI/CD</span><span class="sc">Linux</span>
+              <span class="sc">Docker</span><span class="sc">Git</span><span class="sc">CI/CD</span><span class="sc">Linux</span><span class="sc">PyTorch</span><span class="sc">Isaac Lab</span><span class="sc">React</span><span class="sc">Angular</span>
             </div>
           </div>
         </div>
