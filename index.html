@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shreyas Raorane — Robotics Software Engineer. Multi-agent coordination, motion planning, ROS2 autonomy. M.S.E. Robotics at UPenn GRASP Lab." />
-  <meta property="og:title" content="Shreyas Raorane — Robotics Engineer" />
+  <meta name="description" content="Shreyas Raorane, Robotics Software Engineer. Multi-agent coordination, motion planning, ROS2 autonomy. M.S.E. Robotics at UPenn GRASP Lab." />
+  <meta property="og:title" content="Shreyas Raorane, Robotics Engineer" />
   <meta property="og:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shreyas Raorane — Robotics Engineer" />
+  <meta name="twitter:title" content="Shreyas Raorane, Robotics Engineer" />
   <meta name="twitter:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
   <meta name="twitter:image" content="./og-image.png" />
   <title>Shreyas Raorane</title>
@@ -264,7 +264,7 @@
     }
     .pl:hover { color: var(--accent); border-color: var(--accent) }
 
-    /* SKILLS — visual bars */
+    /* SKILLS */
     .sk-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4) }
     .sk-b { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5) }
     .sk-b h3 { font-size: var(--text-sm); margin-bottom: var(--space-4) }
@@ -278,7 +278,7 @@
     .sk-chips { display: flex; flex-wrap: wrap; gap: .4rem }
     .sc { font-family: var(--font-mono); font-size: .69rem; padding: .28rem .58rem; border-radius: var(--radius-full); border: 1px solid var(--border); color: var(--text-muted); background: var(--surface-2) }
 
-    /* CONTACT — streamlined */
+    /* CONTACT */
     .ct-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-6); align-items: start }
     .cm { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-8); box-shadow: var(--sh-md) }
     .cm h2 { margin-bottom: var(--space-3) }
@@ -358,7 +358,7 @@
   <div class="nav-shell">
     <div class="wrap">
       <nav aria-label="Primary">
-        <a class="brand" href="#top" aria-label="Shreyas Raorane — home">
+        <a class="brand" href="#top" aria-label="Shreyas Raorane, home">
           <div class="brand-ico" aria-hidden="true">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <text x="17" y="23" font-family="'Cabinet Grotesk','Satoshi',Arial,sans-serif" font-size="13" font-weight="900" fill="#01100e" text-anchor="middle" letter-spacing="-0.5">SR</text>
@@ -454,7 +454,7 @@
           <article class="bc cw7 r">
             <div class="sl2">Research direction</div>
             <h3>Why distributed coordination?</h3>
-            <p>Centralized coordination is fragile — when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on LCBA, distributed MPC for quadrotors, and event-driven replanning under partial connectivity.</p>
+            <p>Centralized coordination is fragile: when communication drops or a node fails, the whole fleet stalls. My thesis asks: can we design coordination that degrades <em>gracefully</em> instead of catastrophically? That question drives my work on LCBA, distributed MPC for quadrotors, and event-driven replanning under partial connectivity.</p>
           </article>
           <article class="bc cw5 r">
             <div class="sl2">Research focus</div>
@@ -494,7 +494,7 @@
       <div class="wrap">
         <div class="si r">
           <div><div class="sl2">Experience</div><h2>Industry experience</h2></div>
-          <p>2+ years shipping production software — warehouse automation simulation in C++ and enterprise-scale full-stack delivery — where timing, correctness, and integration under real constraints actually mattered.</p>
+          <p>2+ years shipping production software: warehouse automation simulation in C++ and enterprise-scale full-stack delivery, where timing, correctness, and integration under real constraints actually mattered.</p>
         </div>
         <div class="exp-l">
           <article class="ec r">
@@ -541,7 +541,7 @@
       <div class="wrap">
         <div class="si r">
           <div><div class="sl2">Research &amp; Teaching</div><h2>Research &amp; teaching</h2></div>
-          <p>Graduate research at Penn's GRASP Lab and on the F1/10 RoboRacer platform, plus teaching — focused on multi-robot coordination and autonomy that holds up under real constraints.</p>
+          <p>Graduate research at Penn's GRASP Lab and on the F1/10 RoboRacer platform, plus teaching, focused on multi-robot coordination and autonomy that holds up under real constraints.</p>
         </div>
         <div class="exp-l">
           <article class="ec r">
@@ -552,28 +552,28 @@
               <div class="etag">Research</div>
             </div>
             <div class="eb">
-              <div class="et">Graduate Researcher — M.S.E. Thesis</div>
+              <div class="et">Graduate Researcher, M.S.E. Thesis</div>
               <p>Advisors: Prof. Linh Phan, Prof. Rahul Mangharam, and Prof. M. Ani Hsieh. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
               <ul>
-                <li>Designed <strong>LCBA (Local Consensus Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamic communication graphs, maintaining non-zero task completion where CBBA and SGA baselines drop to zero.</li>
+                <li>Designed <strong>LCBA (Local Consensus-based Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamically changing communication graphs, where CBBA and SGA degrade severely or become intractable.</li>
                 <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
-                <li>Integrated LCBA with three interchangeable path planners (Cooperative A*, PBS, RHCR); evaluated across six maps from 6 to 200 agents over 432+ runs, achieving a <strong>0.91 makespan ratio</strong> vs. centralized SGA.</li>
+                <li>Integrated LCBA with interchangeable path planners (Cooperative A* and RHCR); across a 432-run benchmark, sustained <strong>~0.80 tasks/timestep</strong> (near capacity) with a <strong>6× throughput gap over CBBA</strong> and <strong>16× lower allocation latency</strong> than SGA, scaling to <strong>470 agents</strong> where baselines are intractable.</li>
               </ul>
             </div>
           </article>
           <article class="ec r">
             <div class="em">
               <div class="ed">Feb 2025 – May 2026</div>
-              <div class="eo">UPenn — Prof. Mangharam</div>
+              <div class="eo">UPenn · Prof. Mangharam</div>
               <div class="eloc">Philadelphia, PA</div>
               <div class="etag">Research</div>
             </div>
             <div class="eb">
-              <div class="et">Research Assistant — F1/10 RoboRacer</div>
+              <div class="et">Research Assistant, F1/10 RoboRacer</div>
               <p>RA under Prof. Rahul Mangharam, contributing to the F1/10 autonomous racing platform and its web presence.</p>
               <ul>
-                <li>Revamped <strong>roboracer.ai</strong> — rebuilt the website from the ground up using <strong>React + TypeScript</strong> (Vite), forked from the f1tenth org and extended with 33+ commits.</li>
-                <li>Built the <strong>F1/10 ROS2 autonomy stack</strong> with full AutoDRIVE Simulator integration — bridging simulation and hardware over a shared sensor and message interface with a live tuning UI.</li>
+                <li>Revamped <strong>roboracer.ai</strong>: rebuilt the website from the ground up using <strong>React + TypeScript</strong> (Vite), forked from the f1tenth org and extended with 33+ commits.</li>
+                <li>Built the <strong>F1/10 ROS2 autonomy stack</strong> with full AutoDRIVE Simulator integration, bridging simulation and hardware over a shared sensor and message interface with a live tuning UI.</li>
               </ul>
             </div>
           </article>
@@ -585,7 +585,7 @@
               <div class="etag">Teaching</div>
             </div>
             <div class="eb">
-              <div class="et">Teaching Assistant — ENM2400</div>
+              <div class="et">Teaching Assistant, ENM2400</div>
               <p>Teaching assistant for Differential Equations and Linear Algebra at the University of Pennsylvania.</p>
             </div>
           </article>
@@ -614,10 +614,10 @@
               <div class="pc">Multi-agent · Thesis</div>
             </div>
             <h3>LCBA Warehouse System</h3>
-            <p>Decentralized task allocation for warehouse automation. LCBA extends GCBBA with component-local consensus and event-driven replanning that stays functional even when communication graphs become disconnected, where centralized baselines drop to zero. Integrates Cooperative A*, PBS, and RHCR planners.</p>
+            <p>Decentralized task allocation for warehouse automation. LCBA extends GCBBA with local subgraph consensus and event-driven replanning that stays functional even when communication graphs become disconnected, where CBBA and SGA collapse. Sustains ~0.80 tasks/timestep (near capacity) with a 6× throughput gap over CBBA and 16× lower allocation latency than SGA. Integrates Cooperative A* and RHCR planners.</p>
             <div class="ps">
-              <span class="pst">0.91 makespan ratio</span>
-              <span class="pst">6–200 agents · 432+ runs</span>
+              <span class="pst">6× throughput vs CBBA</span>
+              <span class="pst">Up to 470 agents · 432 runs</span>
               <span class="pst">Python</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/LCBA-Warehouse-System" target="_blank" rel="noopener noreferrer">View repository ↗</a>
@@ -634,11 +634,11 @@
               <div class="pc">Controls · Multi-robot</div>
             </div>
             <h3>SwarmSync</h3>
-            <p>Distributed MPC for quadrotor swarms. QP-backed collision-free trajectory generation across 8+ quadrotors with dynamic obstacle handling; agents reliably reached goals in simulation, degrading only in extremely dense environments.</p>
+            <p>Distributed MPC for multi-drone motion planning with goals that move mid-flight. Extends the online DMPC framework of Luis et al. (2020) with an online Hungarian-algorithm reallocation layer that re-assigns drones to goals during execution. Achieves 100% goal success and zero collisions across all test scenarios, with the QP solver running above 200 Hz (real-time). Tested up to 64 agents.</p>
             <div class="ps">
-              <span class="pst">8+ quadrotors</span>
-              <span class="pst">QP optimization</span>
-              <span class="pst">Python · DMPC</span>
+              <span class="pst">100% success · 0 collisions</span>
+              <span class="pst">Up to 64 agents</span>
+              <span class="pst">C++ solver · Python viz</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/SwarmSync" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
@@ -675,9 +675,10 @@
               <div class="pc">Manipulation · Hardware</div>
             </div>
             <h3>Franka Emika Pick &amp; Place</h3>
-            <p>Full pick-and-place system on the 7-DOF Franka Emika Panda arm. Compared Direct IK (gradient descent with failsafes) vs. bidirectional RRT for trajectory planning; used AprilTag detection with a complementary filter for stable pose estimation, and predictive timing for dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
+            <p>Full pick-and-place and block-stacking system on the 7-DOF Franka Emika Panda arm. Used damped least-squares / pseudo-inverse IK with null-space optimization and pre-computed emergency fallback configs, plus RRT and potential-field planners for collision-free paths; AprilTag detection with a complementary filter gave stable pose estimation, and predictive timing handled dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
             <div class="ps">
-              <span class="pst">IK · RRT · AprilTags</span>
+              <span class="pst">IK · RRT · potential field</span>
+              <span class="pst">AprilTag perception</span>
               <span class="pst">Static + dynamic blocks</span>
               <span class="pst">Python · Gazebo</span>
             </div>
@@ -694,11 +695,11 @@
               </div>
               <div class="pc">ROS2 · Control</div>
             </div>
-            <h3>Autonomous Parallel Parking — F1/10</h3>
-            <p>Autonomous parallel parking system for the F1/10 race car platform. Waypoint-guided navigation with ROS2 and RViz pose tracking; supports manual waypoint logging and replay for precise parking maneuver execution. Containerized with Docker for reproducible deployment.</p>
+            <h3>Autonomous Parallel Parking · F1/10</h3>
+            <p>Autonomous parallel parking system for the F1/10 race car platform. Waypoint-guided navigation built on ROS2 with the f1tenth_gym_ros simulator; supports manual waypoint logging via RViz goal poses for precise parking maneuver execution.</p>
             <div class="ps">
               <span class="pst">Waypoint navigation</span>
-              <span class="pst">ROS2 · Docker</span>
+              <span class="pst">ROS2 · RViz</span>
               <span class="pst">F1/10 platform</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/parallel-parking-roboracer" target="_blank" rel="noopener noreferrer">View repository ↗</a>
@@ -715,10 +716,10 @@
               <div class="pc">ROS2 · Autonomy</div>
             </div>
             <h3>F1/10 Autonomous Racing Stack</h3>
-            <p>Full ROS2 autonomy stack for the F1/10 platform: perception, localization, and planning over LIDAR, IMU, and RGB-D data, bridging the AutoDRIVE Simulator and F1/10 hardware over a shared message interface with a live tuning interface replacing the recompile-and-redeploy loop.</p>
+            <p>Full ROS2 autonomy stack for the F1/10 platform integrating the AutoDRIVE Simulator: wall-follow, gap-follow, and pure-pursuit over LIDAR, IMU, and camera data, with a Gradio-based live tuning interface for setting parameters without the recompile-and-redeploy loop.</p>
             <div class="ps">
-              <span class="pst">LIDAR · IMU · RGB-D</span>
-              <span class="pst">AutoDRIVE + hardware</span>
+              <span class="pst">LIDAR · IMU · camera</span>
+              <span class="pst">AutoDRIVE · Gradio UI</span>
               <span class="pst">Python · C++</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/roboracer-ws" target="_blank" rel="noopener noreferrer">View repository ↗</a>
