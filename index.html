@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -82,27 +82,6 @@
       --term-bg: #1a1e26;
       --term-text: #3ecec0;
     }
-    [data-theme="dark"] {
-      --bg: #0b1119;
-      --surface: #101820;
-      --surface-2: #161f2c;
-      --border: rgba(255,255,255,.07);
-      --divider: rgba(255,255,255,.05);
-      --text: #dde5f0;
-      --text-muted: #8896ac;
-      --text-faint: #4a5a70;
-      --accent: #3ecec0;
-      --accent-h: #62dbd0;
-      --accent-bg: rgba(62,206,192,.09);
-      --accent-fg: #01100e;
-      --sh-sm: 0 1px 3px rgba(0,0,0,.25);
-      --sh-md: 0 8px 28px rgba(0,0,0,.32);
-      --sh-lg: 0 28px 64px rgba(0,0,0,.5);
-      --grid-line: rgba(255,255,255,.03);
-      --term-bg: #080e14;
-      --term-text: #3ecec0;
-    }
-
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
     html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-font-smoothing: antialiased; }
     body { font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--text); background: var(--bg); min-height: 100vh; transition: background .3s, color .3s; }
@@ -147,8 +126,6 @@
       transition: all var(--ease); white-space: nowrap;
     }
     .nav-resume:hover { background: var(--accent); color: var(--accent-fg) }
-    .t-btn { width: 38px; height: 38px; border-radius: var(--radius-full); border: 1px solid var(--border); background: var(--surface); display: grid; place-items: center; transition: background var(--ease) }
-    .t-btn:hover { background: var(--surface-2) }
     .nav-toggle { display: none; width: 40px; height: 40px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface); place-items: center; color: var(--text); }
 
     /* HERO */
@@ -366,7 +343,6 @@
       .nav-r.open { display: flex }
       .nav-r a[data-nav] { padding: var(--space-3) 0; border-bottom: 1px solid var(--divider); font-size: var(--text-base); }
       .nav-r .nav-resume { margin-top: var(--space-4); justify-content: center; }
-      .nav-r .t-btn { margin-top: var(--space-3); }
     }
     @media (max-width: 480px) {
       .wrap { width: calc(100% - 1.5rem) }
@@ -405,11 +381,6 @@
             </svg>
             Resume
           </a>
-          <button class="t-btn" data-theme-toggle aria-label="Toggle dark/light mode">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="ticon">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
         </div>
       </nav>
     </div>
@@ -923,27 +894,6 @@
     toggle.addEventListener('click', function(){ setOpen(!menu.classList.contains('open')); });
     menu.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', function(){ setOpen(false); });
-    });
-  })();
-
-  // Theme
-  (function(){
-    var root = document.documentElement;
-    var btn = document.querySelector('[data-theme-toggle]');
-    var icon = document.getElementById('ticon');
-    var DARK = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
-    var LIGHT = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
-    var saved = null;
-    try { saved = localStorage.getItem('theme'); } catch (e) {}
-    var t = saved || (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
-    root.setAttribute('data-theme', t);
-    if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
-    if (btn) btn.addEventListener('click', function(){
-      t = t === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', t);
-      try { localStorage.setItem('theme', t); } catch (e) {}
-      if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
-      btn.setAttribute('aria-label', 'Switch to ' + (t==='dark'?'light':'dark') + ' mode');
     });
   })();
 
