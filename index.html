@@ -79,8 +79,9 @@
       --sh-md: 0 8px 28px rgba(15,12,5,.1);
       --sh-lg: 0 24px 60px rgba(15,12,5,.14);
       --grid-line: rgba(30,24,12,.05);
-      --term-bg: #1a1e26;
-      --term-text: #3ecec0;
+      --term-bg: #fbfaf7;
+      --term-bar: #efece5;
+      --term-text: #0b7a72;
     }
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
     html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-font-smoothing: antialiased; }
@@ -163,34 +164,34 @@
       overflow: hidden;
       box-shadow: var(--sh-lg);
       font-family: var(--font-mono);
-      font-size: .78rem;
+      font-size: .8rem;
     }
     .term-bar {
       display: flex; align-items: center; justify-content: space-between;
       padding: .55rem 1rem;
-      background: #300a24;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: var(--term-bar);
+      border-bottom: 1px solid rgba(30,24,12,.08);
     }
     .term-bar-left { display: flex; align-items: center; gap: .5rem }
-    .term-title { font-size: .68rem; color: rgba(255,255,255,.5) }
+    .term-title { font-size: .68rem; color: #5c5950 }
     .term-bar-right { display: flex; align-items: center; gap: .4rem }
     .t-wbtn {
       width: 16px; height: 16px; border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.2);
-      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(30,24,12,.15);
+      background: rgba(30,24,12,.05);
       display: grid; place-items: center;
-      font-size: .55rem; color: rgba(255,255,255,.4); line-height: 1;
+      font-size: .55rem; color: rgba(30,24,12,.45); line-height: 1;
     }
     .term-body { padding: 1.2rem 1.4rem; display: grid; gap: .55rem; line-height: 1.5 }
     .tl { display: flex; gap: .6rem; align-items: baseline }
     .tl .p { color: var(--accent); user-select: none }
-    .tl .cmd { color: #dde5f0 }
-    .tl .out { color: #8896ac; padding-left: 1.6rem }
-    .tl .val { color: #62dbd0; font-weight: 500 }
-    .tl .str { color: #f0a868 }
-    .tl .num { color: #a8d0f0 }
-    .tl .kw  { color: #c792ea }
-    .tl .cmt { color: #4a5a70 }
+    .tl .cmd { color: #1a1813 }
+    .tl .out { color: #3d3a31; padding-left: 1.6rem }
+    .tl .val { color: #0a6a5f; font-weight: 600 }
+    .tl .str { color: #9a4d18 }
+    .tl .num { color: #1a5aa3 }
+    .tl .kw  { color: #6a3fb0 }
+    .tl .cmt { color: #6c6a59; font-style: italic }
     .term-cursor { display: inline-block; width: 7px; height: .9em; background: var(--accent); opacity: .9; animation: blink 1.1s step-end infinite; vertical-align: text-bottom; }
     @keyframes blink { 0%,100%{opacity:.9} 50%{opacity:0} }
 
