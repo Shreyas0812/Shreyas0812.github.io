@@ -7,7 +7,33 @@
   <meta property="og:title" content="Shreyas Raorane — Robotics Engineer" />
   <meta property="og:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shreyas Raorane — Robotics Engineer" />
+  <meta name="twitter:description" content="Building reliable autonomy: multi-agent coordination, motion planning, ROS2, and production-grade robotics software." />
+  <meta name="twitter:image" content="./og-image.png" />
   <title>Shreyas Raorane</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shreyas Raorane",
+    "jobTitle": "Robotics Software Engineer",
+    "email": "mailto:raorane@seas.upenn.edu",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Pennsylvania"
+    },
+    "knowsAbout": ["Multi-agent coordination", "Motion planning", "ROS2", "Model predictive control", "Robotics software engineering"],
+    "sameAs": [
+      "https://github.com/Shreyas0812",
+      "https://www.linkedin.com/in/shreyas-raorane"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
   <link rel="preconnect" href="https://api.fontshare.com" />
@@ -123,6 +149,7 @@
     .nav-resume:hover { background: var(--accent); color: var(--accent-fg) }
     .t-btn { width: 38px; height: 38px; border-radius: var(--radius-full); border: 1px solid var(--border); background: var(--surface); display: grid; place-items: center; transition: background var(--ease) }
     .t-btn:hover { background: var(--surface-2) }
+    .nav-toggle { display: none; width: 40px; height: 40px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface); place-items: center; color: var(--text); }
 
     /* HERO */
     .hero { padding: clamp(var(--space-16), 10vh, var(--space-24)) 0 clamp(var(--space-12), 8vh, var(--space-20)); position: relative; overflow: hidden; }
@@ -327,8 +354,19 @@
       .pg { grid-template-columns: 1fr }
       .bento { display: flex; flex-direction: column }
       .sk-g { grid-template-columns: 1fr }
-      .nav-r a:not([aria-label]):not(:last-child):not(.nav-resume) { display: none }
       h1 { font-size: clamp(2.8rem, 10vw, 4rem) }
+      .nav-toggle { display: grid }
+      .nav-r {
+        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--surface); border-bottom: 1px solid var(--border);
+        box-shadow: var(--sh-md); padding: var(--space-2) var(--space-5) var(--space-5);
+        display: none;
+      }
+      .nav-r.open { display: flex }
+      .nav-r a[data-nav] { padding: var(--space-3) 0; border-bottom: 1px solid var(--divider); font-size: var(--text-base); }
+      .nav-r .nav-resume { margin-top: var(--space-4); justify-content: center; }
+      .nav-r .t-btn { margin-top: var(--space-3); }
     }
     @media (max-width: 480px) {
       .wrap { width: calc(100% - 1.5rem) }
@@ -352,9 +390,13 @@
           </div>
           Shreyas Raorane
         </a>
-        <div class="nav-r">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="nav-r" id="nav-links">
           <a href="#about" data-nav>About</a>
           <a href="#experience" data-nav>Experience</a>
+          <a href="#research" data-nav>Research</a>
           <a href="#projects" data-nav>Projects</a>
           <a href="#contact" data-nav>Contact</a>
           <a class="nav-resume" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf" aria-label="Download resume PDF">
@@ -480,55 +522,10 @@
     <section id="experience">
       <div class="wrap">
         <div class="si r">
-          <div><div class="sl2">Experience</div><h2>Where I've worked</h2></div>
-          <p>Research and industry experience across robotics simulation, production software, and multi-robot planning — with a focus on systems that hold up under real constraints.</p>
+          <div><div class="sl2">Experience</div><h2>Industry experience</h2></div>
+          <p>2+ years shipping production software — warehouse automation simulation in C++ and enterprise-scale full-stack delivery — where timing, correctness, and integration under real constraints actually mattered.</p>
         </div>
         <div class="exp-l">
-          <article class="ec r">
-            <div class="em">
-              <div class="ed">Oct 2025 – May 2026</div>
-              <div class="eo">UPenn GRASP Lab</div>
-              <div class="eloc">Philadelphia, PA</div>
-              <div class="etag">Research</div>
-            </div>
-            <div class="eb">
-              <div class="et">Graduate Researcher — M.S.E. Thesis</div>
-              <p>Advisors: Prof. Linh Phan, Prof. Rahul Mangharam, and Prof. M. Ani Hsieh. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
-              <ul>
-                <li>Designed <strong>LCBA (Local Consensus Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamic communication graphs, maintaining non-zero task completion where CBBA and SGA baselines drop to zero.</li>
-                <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
-                <li>Integrated LCBA with three interchangeable path planners (Cooperative A*, PBS, RHCR); evaluated across six maps from 6 to 200 agents over 432+ runs, achieving a <strong>0.91 makespan ratio</strong> vs. centralized SGA.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="ec r">
-            <div class="em">
-              <div class="ed">Jan – May 2026</div>
-              <div class="eo">UPenn</div>
-              <div class="eloc">Philadelphia, PA</div>
-              <div class="etag">Teaching</div>
-            </div>
-            <div class="eb">
-              <div class="et">Teaching Assistant — ENM2400</div>
-              <p>Teaching assistant for Differential Equations and Linear Algebra at the University of Pennsylvania.</p>
-            </div>
-          </article>
-          <article class="ec r">
-            <div class="em">
-              <div class="ed">Feb 2025 – May 2026</div>
-              <div class="eo">UPenn — Prof. Mangharam</div>
-              <div class="eloc">Philadelphia, PA</div>
-              <div class="etag">Research</div>
-            </div>
-            <div class="eb">
-              <div class="et">Research Assistant — F1/10 RoboRacer</div>
-              <p>RA under Prof. Rahul Mangharam, contributing to the F1/10 autonomous racing platform and its web presence.</p>
-              <ul>
-                <li>Revamped <strong>roboracer.ai</strong> — rebuilt the website from the ground up using <strong>React + TypeScript</strong> (Vite), forked from the f1tenth org and extended with 33+ commits.</li>
-                <li>Built the <strong>F1/10 ROS2 autonomy stack</strong> with full AutoDRIVE Simulator integration — bridging simulation and hardware over a shared sensor and message interface with a live tuning UI.</li>
-              </ul>
-            </div>
-          </article>
           <article class="ec r">
             <div class="em">
               <div class="ed">Jun – Aug 2025</div>
@@ -560,6 +557,65 @@
                 <li>Delivered production software for Verizon's ESAP Migration Project (10,000+ users); optimized 40+ PostgreSQL queries, reducing response time by <strong>35%</strong>.</li>
                 <li>Worked across the full application stack with peer code review and Agile/SAFe delivery.</li>
               </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- RESEARCH & TEACHING -->
+    <section id="research">
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">Research &amp; Teaching</div><h2>Research &amp; teaching</h2></div>
+          <p>Graduate research at Penn's GRASP Lab and on the F1/10 RoboRacer platform, plus teaching — focused on multi-robot coordination and autonomy that holds up under real constraints.</p>
+        </div>
+        <div class="exp-l">
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Oct 2025 – May 2026</div>
+              <div class="eo">UPenn GRASP Lab</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Research</div>
+            </div>
+            <div class="eb">
+              <div class="et">Graduate Researcher — M.S.E. Thesis</div>
+              <p>Advisors: Prof. Linh Phan, Prof. Rahul Mangharam, and Prof. M. Ani Hsieh. Building a decentralized coordination system for multi-robot warehouse automation that works under communication degradation.</p>
+              <ul>
+                <li>Designed <strong>LCBA (Local Consensus Bundle Algorithm)</strong>, a decentralized task allocation algorithm extending GCBBA to intermittently disconnected, dynamic communication graphs, maintaining non-zero task completion where CBBA and SGA baselines drop to zero.</li>
+                <li>Built <strong>event-driven replanning</strong> triggered on task completion, keeping fleets coordinated across degraded and failed communication links.</li>
+                <li>Integrated LCBA with three interchangeable path planners (Cooperative A*, PBS, RHCR); evaluated across six maps from 6 to 200 agents over 432+ runs, achieving a <strong>0.91 makespan ratio</strong> vs. centralized SGA.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Feb 2025 – May 2026</div>
+              <div class="eo">UPenn — Prof. Mangharam</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Research</div>
+            </div>
+            <div class="eb">
+              <div class="et">Research Assistant — F1/10 RoboRacer</div>
+              <p>RA under Prof. Rahul Mangharam, contributing to the F1/10 autonomous racing platform and its web presence.</p>
+              <ul>
+                <li>Revamped <strong>roboracer.ai</strong> — rebuilt the website from the ground up using <strong>React + TypeScript</strong> (Vite), forked from the f1tenth org and extended with 33+ commits.</li>
+                <li>Built the <strong>F1/10 ROS2 autonomy stack</strong> with full AutoDRIVE Simulator integration — bridging simulation and hardware over a shared sensor and message interface with a live tuning UI.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ec r">
+            <div class="em">
+              <div class="ed">Jan – May 2026</div>
+              <div class="eo">UPenn</div>
+              <div class="eloc">Philadelphia, PA</div>
+              <div class="etag">Teaching</div>
+            </div>
+            <div class="eb">
+              <div class="et">Teaching Assistant — ENM2400</div>
+              <p>Teaching assistant for Differential Equations and Linear Algebra at the University of Pennsylvania.</p>
             </div>
           </article>
         </div>
@@ -712,11 +768,9 @@
         <div class="sk-g r">
           <div class="sk-b">
             <h3>Languages</h3>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">C++</span></div><div class="sk-track"><div class="sk-fill" style="width:90%;--d:0ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">Python</span></div><div class="sk-track"><div class="sk-fill" style="width:95%;--d:60ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">MATLAB</span></div><div class="sk-track"><div class="sk-fill" style="width:70%;--d:120ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">JavaScript</span></div><div class="sk-track"><div class="sk-fill" style="width:60%;--d:120ms"></div></div></div>
-            <div class="sk-item"><div class="sk-row"><span class="sk-name">OOP / Design Patterns</span></div><div class="sk-track"><div class="sk-fill" style="width:85%;--d:180ms"></div></div></div>
+            <div class="sk-chips">
+              <span class="sc">C++</span><span class="sc">Python</span><span class="sc">MATLAB</span><span class="sc">JavaScript</span><span class="sc">TypeScript</span><span class="sc">OOP / Design Patterns</span>
+            </div>
           </div>
           <div class="sk-b">
             <h3>Planning &amp; Control</h3>
@@ -763,7 +817,7 @@
             <h2>Let's talk robots</h2>
             <p>Looking for robotics software, autonomy, and multi-robot systems roles starting summer/fall 2026. Happy to chat about work, research, or projects.</p>
             <div class="btns">
-              <button class="btn bp" id="copy-email-btn" onclick="copyEmail()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Send an email</button>
+              <button class="btn bp" id="copy-email-btn" onclick="copyEmail()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy email</button>
               <a class="btn btn-dl" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M8 2v8M5 7l3 3 3-3"/><path d="M3 13h10"/>
@@ -856,6 +910,22 @@
     });
   }
 
+  // Mobile nav menu
+  (function(){
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-links');
+    if (!toggle || !menu) return;
+    function setOpen(open){
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    toggle.addEventListener('click', function(){ setOpen(!menu.classList.contains('open')); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+  })();
+
   // Theme
   (function(){
     var root = document.documentElement;
@@ -863,12 +933,15 @@
     var icon = document.getElementById('ticon');
     var DARK = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
     var LIGHT = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
-    var t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    var t = saved || (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
     root.setAttribute('data-theme', t);
     if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
     if (btn) btn.addEventListener('click', function(){
       t = t === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', t);
+      try { localStorage.setItem('theme', t); } catch (e) {}
       if (icon) icon.innerHTML = t === 'dark' ? DARK : LIGHT;
       btn.setAttribute('aria-label', 'Switch to ' + (t==='dark'?'light':'dark') + ' mode');
     });
