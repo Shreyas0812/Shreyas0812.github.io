@@ -379,10 +379,10 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
         <div class="nav-r" id="nav-links">
+          <a href="#projects" data-nav>Projects</a>
           <a href="#about" data-nav>About</a>
           <a href="#experience" data-nav>Experience</a>
           <a href="#research" data-nav>Research</a>
-          <a href="#projects" data-nav>Projects</a>
           <a href="#contact" data-nav>Contact</a>
           <a class="nav-resume" href="./Resume_Raorane.pdf" download="Resume_Raorane.pdf" aria-label="Download resume PDF">
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -452,6 +452,146 @@
               <div class="tl"><span class="p">$</span><span class="term-cursor"></span></div>
             </div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <hr class="d">
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="si r">
+          <div><div class="sl2">Projects</div><h2>Selected technical work</h2></div>
+          <p>Six projects across core areas: distributed coordination, model predictive control, adaptive motion planning, end-to-end ROS2 autonomy, manipulation on real hardware, and autonomous parking.</p>
+        </div>
+        <div class="pg">
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="5" height="7" rx="1"/><rect x="16" y="11" width="5" height="7" rx="1"/>
+                  <path d="M8 15h8M12 11V7"/><circle cx="12" cy="5" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">Multi-agent · Thesis</div>
+            </div>
+            <h3>LCBA Warehouse System</h3>
+            <p>Decentralized task allocation for warehouse automation. LCBA extends GCBBA with local subgraph consensus and event-driven replanning that stays functional even when communication graphs become disconnected, where CBBA and SGA collapse. Sustains ~0.80 tasks/timestep (near capacity) with a 6× throughput gap over CBBA and 16× lower allocation latency than SGA. Integrates Cooperative A* and RHCR planners.</p>
+            <div class="ps">
+              <span class="pst">6× throughput vs CBBA</span>
+              <span class="pst">Up to 470 agents · 432 runs</span>
+              <span class="pst">Python</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/LCBA-Warehouse-System" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="proj-video">
+              <video autoplay loop muted playsinline poster="swarmsync_hero_hq.gif">
+                <source src="swarmsync_hero_hq.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L8 8H4l4 3-2 5 6-4 6 4-2-5 4-3h-4z"/>
+                  <circle cx="12" cy="16" r="2"/>
+                  <path d="M7 20h10"/>
+                </svg>
+              </div>
+              <div class="pc">Controls · Multi-robot</div>
+            </div>
+            <h3>SwarmSync</h3>
+            <p>Distributed MPC for multi-drone motion planning with goals that move mid-flight. Extends the online DMPC framework of Luis et al. (2020) with an online Hungarian-algorithm reallocation layer that re-assigns drones to goals during execution. Achieves 100% goal success and zero collisions across all test scenarios, with the QP solver running above 200 Hz (real-time). Tested up to 64 agents.</p>
+            <div class="ps">
+              <span class="pst">100% success · 0 collisions</span>
+              <span class="pst">Up to 64 agents</span>
+              <span class="pst">C++ solver · Python viz</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/SwarmSync" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h2M19 12h2M12 3v2M12 19v2"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+                  <path d="M8 12h1M15 12h1" opacity=".4"/>
+                </svg>
+              </div>
+              <div class="pc">Motion planning</div>
+            </div>
+            <h3>SBAMP</h3>
+            <p>Sampling-based adaptive motion planner integrating RRT* with a Lyapunov-stable SEDS-inspired controller for real-time goal tracking. Replans fast enough to track moving goals at speeds where the static RRT* baseline fails; hardware-validated on RoboRacer. Published at the <a href="https://openreview.net/forum?id=7CiuqF99ue" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-decoration-color:var(--accent)"><strong>ICRA 2026 Workshop on Frontiers of Optimization for Robotics</strong> ↗</a>.</p>
+            <div class="ps">
+              <span class="pst">ICRA Workshop 2026</span>
+              <span class="pst">RRT* + Lyapunov DS</span>
+              <span class="pst">Hardware validated</span>
+              <span class="pst">Python</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/SBAMP" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L8 6H4v4l-2 2 2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4z"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">Manipulation · Hardware</div>
+            </div>
+            <h3>Franka Emika Pick &amp; Place</h3>
+            <p>Full pick-and-place and block-stacking system on the 7-DOF Franka Emika Panda arm. Used damped least-squares / pseudo-inverse IK with null-space optimization and pre-computed emergency fallback configs, plus RRT and potential-field planners for collision-free paths; AprilTag detection with a complementary filter gave stable pose estimation, and predictive timing handled dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
+            <div class="ps">
+              <span class="pst">IK · RRT · potential field</span>
+              <span class="pst">AprilTag perception</span>
+              <span class="pst">Static + dynamic blocks</span>
+              <span class="pst">Python · Gazebo</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/Franka-Emika-Pick-and-Place" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="8" width="20" height="10" rx="2"/>
+                  <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+                  <circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">ROS2 · Control</div>
+            </div>
+            <h3>Autonomous Parallel Parking · F1/10</h3>
+            <p>Autonomous parallel parking system for the F1/10 race car platform. Waypoint-guided navigation built on ROS2 with the f1tenth_gym_ros simulator; supports manual waypoint logging via RViz goal poses for precise parking maneuver execution.</p>
+            <div class="ps">
+              <span class="pst">Waypoint navigation</span>
+              <span class="pst">ROS2 · RViz</span>
+              <span class="pst">F1/10 platform</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/parallel-parking-roboracer" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="14" width="20" height="6" rx="2"/>
+                  <path d="M6 14V9a6 6 0 0 1 12 0v5"/>
+                  <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="pc">ROS2 · Autonomy</div>
+            </div>
+            <h3>F1/10 Autonomous Racing Stack</h3>
+            <p>Full ROS2 autonomy stack for the F1/10 platform integrating the AutoDRIVE Simulator: wall-follow, gap-follow, and pure-pursuit over LIDAR, IMU, and camera data, with a Gradio-based live tuning interface for setting parameters without the recompile-and-redeploy loop.</p>
+            <div class="ps">
+              <span class="pst">LIDAR · IMU · camera</span>
+              <span class="pst">AutoDRIVE · Gradio UI</span>
+              <span class="pst">Python · C++</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/roboracer-ws" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
         </div>
       </div>
     </section>
@@ -603,146 +743,6 @@
               <div class="et">Teaching Assistant, ENM2400</div>
               <p>Teaching assistant for Differential Equations and Linear Algebra at the University of Pennsylvania.</p>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <hr class="d">
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="wrap">
-        <div class="si r">
-          <div><div class="sl2">Projects</div><h2>Selected technical work</h2></div>
-          <p>Six projects across core areas: distributed coordination, model predictive control, adaptive motion planning, end-to-end ROS2 autonomy, manipulation on real hardware, and autonomous parking.</p>
-        </div>
-        <div class="pg">
-          <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="5" height="7" rx="1"/><rect x="16" y="11" width="5" height="7" rx="1"/>
-                  <path d="M8 15h8M12 11V7"/><circle cx="12" cy="5" r="2"/>
-                </svg>
-              </div>
-              <div class="pc">Multi-agent · Thesis</div>
-            </div>
-            <h3>LCBA Warehouse System</h3>
-            <p>Decentralized task allocation for warehouse automation. LCBA extends GCBBA with local subgraph consensus and event-driven replanning that stays functional even when communication graphs become disconnected, where CBBA and SGA collapse. Sustains ~0.80 tasks/timestep (near capacity) with a 6× throughput gap over CBBA and 16× lower allocation latency than SGA. Integrates Cooperative A* and RHCR planners.</p>
-            <div class="ps">
-              <span class="pst">6× throughput vs CBBA</span>
-              <span class="pst">Up to 470 agents · 432 runs</span>
-              <span class="pst">Python</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/LCBA-Warehouse-System" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
-            <div class="proj-video">
-              <video autoplay loop muted playsinline poster="swarmsync_hero_hq.gif">
-                <source src="swarmsync_hero_hq.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L8 8H4l4 3-2 5 6-4 6 4-2-5 4-3h-4z"/>
-                  <circle cx="12" cy="16" r="2"/>
-                  <path d="M7 20h10"/>
-                </svg>
-              </div>
-              <div class="pc">Controls · Multi-robot</div>
-            </div>
-            <h3>SwarmSync</h3>
-            <p>Distributed MPC for multi-drone motion planning with goals that move mid-flight. Extends the online DMPC framework of Luis et al. (2020) with an online Hungarian-algorithm reallocation layer that re-assigns drones to goals during execution. Achieves 100% goal success and zero collisions across all test scenarios, with the QP solver running above 200 Hz (real-time). Tested up to 64 agents.</p>
-            <div class="ps">
-              <span class="pst">100% success · 0 collisions</span>
-              <span class="pst">Up to 64 agents</span>
-              <span class="pst">C++ solver · Python viz</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/SwarmSync" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 12h2M19 12h2M12 3v2M12 19v2"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <path d="M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
-                  <path d="M8 12h1M15 12h1" opacity=".4"/>
-                </svg>
-              </div>
-              <div class="pc">Motion planning</div>
-            </div>
-            <h3>SBAMP</h3>
-            <p>Sampling-based adaptive motion planner integrating RRT* with a Lyapunov-stable SEDS-inspired controller for real-time goal tracking. Replans fast enough to track moving goals at speeds where the static RRT* baseline fails; hardware-validated on RoboRacer. Published at the <a href="https://openreview.net/forum?id=7CiuqF99ue" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-decoration-color:var(--accent)"><strong>ICRA 2026 Workshop on Frontiers of Optimization for Robotics</strong> ↗</a>.</p>
-            <div class="ps">
-              <span class="pst">ICRA Workshop 2026</span>
-              <span class="pst">RRT* + Lyapunov DS</span>
-              <span class="pst">Hardware validated</span>
-              <span class="pst">Python</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/SBAMP" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L8 6H4v4l-2 2 2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4z"/>
-                  <circle cx="12" cy="12" r="2"/>
-                </svg>
-              </div>
-              <div class="pc">Manipulation · Hardware</div>
-            </div>
-            <h3>Franka Emika Pick &amp; Place</h3>
-            <p>Full pick-and-place and block-stacking system on the 7-DOF Franka Emika Panda arm. Used damped least-squares / pseudo-inverse IK with null-space optimization and pre-computed emergency fallback configs, plus RRT and potential-field planners for collision-free paths; AprilTag detection with a complementary filter gave stable pose estimation, and predictive timing handled dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
-            <div class="ps">
-              <span class="pst">IK · RRT · potential field</span>
-              <span class="pst">AprilTag perception</span>
-              <span class="pst">Static + dynamic blocks</span>
-              <span class="pst">Python · Gazebo</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/Franka-Emika-Pick-and-Place" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="8" width="20" height="10" rx="2"/>
-                  <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
-                  <circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
-                </svg>
-              </div>
-              <div class="pc">ROS2 · Control</div>
-            </div>
-            <h3>Autonomous Parallel Parking · F1/10</h3>
-            <p>Autonomous parallel parking system for the F1/10 race car platform. Waypoint-guided navigation built on ROS2 with the f1tenth_gym_ros simulator; supports manual waypoint logging via RViz goal poses for precise parking maneuver execution.</p>
-            <div class="ps">
-              <span class="pst">Waypoint navigation</span>
-              <span class="pst">ROS2 · RViz</span>
-              <span class="pst">F1/10 platform</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/parallel-parking-roboracer" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="14" width="20" height="6" rx="2"/>
-                  <path d="M6 14V9a6 6 0 0 1 12 0v5"/>
-                  <circle cx="12" cy="17" r="1" fill="currentColor"/>
-                </svg>
-              </div>
-              <div class="pc">ROS2 · Autonomy</div>
-            </div>
-            <h3>F1/10 Autonomous Racing Stack</h3>
-            <p>Full ROS2 autonomy stack for the F1/10 platform integrating the AutoDRIVE Simulator: wall-follow, gap-follow, and pure-pursuit over LIDAR, IMU, and camera data, with a Gradio-based live tuning interface for setting parameters without the recompile-and-redeploy loop.</p>
-            <div class="ps">
-              <span class="pst">LIDAR · IMU · camera</span>
-              <span class="pst">AutoDRIVE · Gradio UI</span>
-              <span class="pst">Python · C++</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/roboracer-ws" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
           </article>
         </div>
       </div>
