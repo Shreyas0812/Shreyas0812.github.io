@@ -257,9 +257,6 @@
     .proj-video video {
       width: 100%; height: 100%; object-fit: cover; display: block;
     }
-    .proj-video iframe {
-      width: 100%; height: 100%; border: 0; display: block;
-    }
     .pt { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3) }
     .pi {
       width: 42px; height: 42px; border-radius: var(--radius-lg);
@@ -551,7 +548,9 @@
           </article>
           <article class="proj r">
             <div class="proj-video">
-              <iframe src="https://www.youtube.com/embed/JrdSesiJ-T0" title="Intuitive AI — Teaching Autonomous Systems to K-12 STEM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <video autoplay loop muted playsinline poster="f1tenth_hero_hq.gif">
+                <source src="f1tenth_hero_hq.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="pt">
               <div class="pi" aria-hidden="true">
