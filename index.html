@@ -467,7 +467,7 @@
       <div class="wrap">
         <div class="si r">
           <div><div class="sl2">Projects</div><h2>Selected technical work</h2></div>
-          <p>Seven projects across core areas: adaptive motion planning, distributed coordination, model predictive control, end-to-end ROS2 autonomy, manipulation on real hardware, reinforcement learning, and state estimation.</p>
+          <p>Eight projects across core areas: adaptive motion planning, distributed coordination, model predictive control, end-to-end ROS2 autonomy, manipulation on real hardware, reinforcement learning (from-scratch and GPU-accelerated), and state estimation.</p>
         </div>
         <div class="pg">
           <article class="proj r">
@@ -576,26 +576,6 @@
             </div>
           </article>
           <article class="proj r">
-            <div class="pt">
-              <div class="pi" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L8 6H4v4l-2 2 2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4z"/>
-                  <circle cx="12" cy="12" r="2"/>
-                </svg>
-              </div>
-              <div class="pc">Manipulation · Hardware</div>
-            </div>
-            <h3>Franka Emika Pick &amp; Place</h3>
-            <p>Full pick-and-place and block-stacking system on the 7-DOF Franka Emika Panda arm. Used damped least-squares / pseudo-inverse IK with null-space optimization and pre-computed emergency fallback configs, plus RRT and potential-field planners for collision-free paths; AprilTag detection with a complementary filter gave stable pose estimation, and predictive timing handled dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
-            <div class="ps">
-              <span class="pst">IK · RRT · potential field</span>
-              <span class="pst">AprilTag perception</span>
-              <span class="pst">Static + dynamic blocks</span>
-              <span class="pst">Python · Gazebo</span>
-            </div>
-            <a class="pl" href="https://github.com/Shreyas0812/Franka-Emika-Pick-and-Place" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
-          </article>
-          <article class="proj r">
             <div class="proj-video">
               <video autoplay loop muted playsinline poster="ppo_drone_hover_hq.gif">
                 <source src="ppo_drone_hover_hq.mp4" type="video/mp4">
@@ -621,6 +601,46 @@
               <span class="pst">Python</span>
             </div>
             <a class="pl" href="https://github.com/Shreyas0812/ppo-drone-hover-cpu" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 21V4"/>
+                  <path d="M4 4h13l-2.5 4 2.5 4H4"/>
+                </svg>
+              </div>
+              <div class="pc">Reinforcement Learning · Simulation</div>
+            </div>
+            <h3>PPO Drone Racing</h3>
+            <p>PPO for autonomous drone racing in NVIDIA Isaac Lab, training a quadrotor to fly a gate course. Scales to 8,192 parallel GPU environments over 5,000 iterations on a customized rsl_rl pipeline, with headless training and a separate evaluation path that records flight videos of the learned policy. Built for ESE 6150 (Physical Intelligence).</p>
+            <div class="ps">
+              <span class="pst">Isaac Lab · GPU</span>
+              <span class="pst">8,192 parallel envs</span>
+              <span class="pst">rsl_rl · PPO</span>
+              <span class="pst">Python</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/ppo_drone_racing" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
+          </article>
+          <article class="proj r">
+            <div class="pt">
+              <div class="pi" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L8 6H4v4l-2 2 2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4z"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div class="pc">Manipulation · Hardware</div>
+            </div>
+            <h3>Franka Emika Pick &amp; Place</h3>
+            <p>Full pick-and-place and block-stacking system on the 7-DOF Franka Emika Panda arm. Used damped least-squares / pseudo-inverse IK with null-space optimization and pre-computed emergency fallback configs, plus RRT and potential-field planners for collision-free paths; AprilTag detection with a complementary filter gave stable pose estimation, and predictive timing handled dynamic block interception on a rotating turntable. Placed <strong>3rd in the class competition</strong>.</p>
+            <div class="ps">
+              <span class="pst">IK · RRT · potential field</span>
+              <span class="pst">AprilTag perception</span>
+              <span class="pst">Static + dynamic blocks</span>
+              <span class="pst">Python · Gazebo</span>
+            </div>
+            <a class="pl" href="https://github.com/Shreyas0812/Franka-Emika-Pick-and-Place" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>View repository ↗</a>
           </article>
           <article class="proj r">
             <div class="pt">
