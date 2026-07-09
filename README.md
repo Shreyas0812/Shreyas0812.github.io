@@ -1,6 +1,6 @@
 # Shreyas Raorane Portfolio
 
-Personal portfolio site for Shreyas Raorane, robotics software engineer (M.S.E. Robotics, UPenn GRASP Lab). Focus areas: multi-agent coordination, motion planning, and ROS2 autonomy.
+Personal portfolio site for Shreyas Raorane, robotics software engineer (M.S.E. Robotics, UPenn GRASP Lab). Focus areas: multi-agent coordination, motion planning, reinforcement learning, and ROS2 autonomy.
 
 ## Stack
 
@@ -8,13 +8,13 @@ A single static file, `index.html`, with all CSS and JavaScript inline. No build
 
 ## Structure
 
-The page is one `index.html` containing:
+The page is one `index.html` containing these sections (in order):
 
 - **Hero**: intro, links, and a decorative terminal card (hidden below 1024px)
-- **About**: research direction and focus, with a publications list
+- **Projects**: eight selected technical projects; most cards have an autoplay/muted/looping hero video (from `assets/`), Franka and the UKF are text-only
 - **Experience**: industry roles (OPEX, Brillio)
-- **Research & Teaching**: GRASP Lab thesis, F1/10 RoboRacer RA, teaching
-- **Projects**: six selected technical projects
+- **Research**: GRASP Lab thesis, F1/10 RoboRacer RA, teaching
+- **Publications**: research output list
 - **Skills**: languages, planning/control, multi-agent, tools, systems
 - **Contact**: email (copy-to-clipboard), GitHub, LinkedIn
 
@@ -23,8 +23,9 @@ Inline scripts handle: runtime email assembly (basic bot-scraping mitigation), c
 ## Files
 
 - `index.html`: the entire site
+- `assets/`: project hero media — the `*_hq.mp4` clips and `*_hq.gif` posters used by the Projects section
 - `favicon.svg`: favicon
-- `Resume_Raorane.pdf`: current resume (linked from the nav, hero, and contact section)
+- `Raorane_Resume_Robotics_Engineer.pdf`: current resume (linked from the nav, hero, and contact section)
 - `Raorane_Resume_EU.pdf`: EU-format resume (not currently linked)
 - `og-image.png`: 1200x630 social/link preview image, matching the site's light theme. Referenced by the `og:image` and `twitter:image` meta tags.
 
